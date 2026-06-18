@@ -1802,8 +1802,10 @@ details[open] .faq-summary::after{transform:rotate(45deg)}
   .orb-nav-btn{background:rgba(182,138,56,0.15);border:1px solid rgba(182,138,56,0.4);color:#B68A38;border-radius:50%;width:34px;height:34px;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}
   /* Reviews ticker (home page) */
   .grev-section{padding-block:clamp(40px,6vw,60px)}
-  .grev-cols-wrap{grid-template-columns:1fr;height:auto;max-height:420px}
-  .grev-col:nth-child(2),.grev-col:nth-child(3){display:none}
+  .grev-cols-wrap{grid-template-columns:1fr!important;height:380px!important;max-height:380px;overflow:hidden!important;width:100%!important}
+  .grev-col:nth-child(2),.grev-col:nth-child(3){display:none!important}
+  .grev-col{width:100%!important}
+  .grev-card{width:auto!important}
   /* Visit / Find Us */
   .visit-dark{min-height:auto;flex-direction:column}
   .visit-dark-wrap{grid-template-columns:1fr;max-width:100%}
