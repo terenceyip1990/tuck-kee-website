@@ -1948,8 +1948,10 @@ details[open] .faq-summary::after{transform:rotate(45deg)}
 .hero-revealed .hero-ri-actions{transition-delay:0.58s}
 .hero-revealed .hero-ri-trust{transition-delay:0.7s}
 .hero-revealed .hero-ri-credit{transition-delay:0.82s}
-.hero-portfolio-credit{font-size:0.72rem;color:rgba(245,239,227,0.45);letter-spacing:0.08em;margin-top:4px;text-align:center}
-.hero-portfolio-credit strong{color:rgba(245,239,227,0.7);font-weight:600}
+.hero-portfolio-credit{font-size:0.85rem;color:rgba(245,239,227,0.75);letter-spacing:0.12em;margin-top:10px;text-align:center;text-transform:uppercase;border-top:1px solid rgba(245,239,227,0.18);padding-top:10px}
+.hero-portfolio-credit strong{color:var(--gold);font-weight:700;font-size:0.9rem}
+.footer-dev-credit{text-align:center;margin-top:14px;font-size:0.78rem;color:var(--ink-soft);letter-spacing:0.1em;text-transform:uppercase}
+.footer-dev-credit strong{color:var(--gold);font-weight:700}
 
 /* ── ATMO SECTION ──────────────────────────────────────────── */
 .atmo-section{background:var(--night);color:var(--paper);padding:clamp(72px,10vw,140px) var(--col-pad);position:relative;overflow:hidden}
