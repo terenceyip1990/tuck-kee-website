@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1A1410">
+  <meta name="description" content="Ipoh Tuck Kee Restaurant — Authentic Chinese noodles since 1963. 61, Jalan Yau Tet Shin, Ipoh. Open daily. Call 016-220 9361.">
+  <title>Ipoh Tuck Kee Restaurant · 德記餐廳 · Since 1963</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css?v=44">
+</head>
+<body>
+
+<!-- ── STATUS BAR ─────────────────────────────────────────── -->
+<div class="status-bar" role="banner" aria-label="Restaurant status">
+  <div class="status-bar-left">
+    <span class="status-pulse" id="statusPulse" aria-live="polite">
+      <span class="status-pulse-dot" aria-hidden="true"></span>
+      <span class="status-pulse-label">Open Now · Closes 10:45 PM</span>
+    </span>
+    <span class="status-divider" aria-hidden="true"></span>
+    <span class="status-addr">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      61, Jalan Yau Tet Shin · Ipoh
+    </span>
+  </div>
+  <div class="status-bar-right">
+    <span class="status-since" aria-hidden="true">Est. 1963</span>
+    <span class="status-divider" aria-hidden="true"></span>
+    <a href="tel:016-2209361" class="status-phone" aria-label="Call 016 220 9361">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      016-220 9361
+    </a>
+  </div>
+</div>
+
+<!-- ── NAV ────────────────────────────────────────────────── -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main">
+  <div class="nav-inner wrap">
+    <a href="index.html" class="nav-logo" aria-label="Ipoh Tuck Kee — Home">
+      <img src="images/logo.png" alt="Ipoh Tuck Kee · 怡保德記" class="nav-logo-img">
+    </a>
+    <ul class="nav-links" id="navLinks" role="menubar">
+      <li><a href="index.html"      class="nav-link active" role="menuitem">Home</a></li>
+      <li><a href="menu.html"        class="nav-link" role="menuitem">Menu</a></li>
+      <li><a href="story.html"       class="nav-link" role="menuitem">Our Story</a></li>
+      <li><a href="reviews.html"     class="nav-link" role="menuitem">Reviews</a></li>
+      <li><a href="gallery.html"     class="nav-link" role="menuitem">Gallery</a></li>
+      <li><a href="reservation.html" class="nav-link" role="menuitem">Find Us</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="reservation.html" class="btn btn-cinnabar btn-pill nav-cta">Visit Us</a>
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO (full-width video + scroll-slice canvas) ───────── -->
+<section class="hero-fw" id="heroSection" aria-label="Welcome to Ipoh Tuck Kee">
+
+  <!-- Hidden video source for canvas drawing -->
+  <video id="heroVideo" class="hero-video-src" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+    <source src="tuckkee.mp4" type="video/mp4">
+  </video>
+
+  <!-- Canvas — scroll-slice pixel effect -->
+  <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+
+  <!-- Centre copy -->
+  <div class="hero-fw-copy" id="heroCopy">
+
+    <div class="hero-reveal-item hero-ri-seal">
+      <img src="images/logo.png" alt="Ipoh Tuck Kee 怡保德記" class="hero-logo-img" aria-hidden="true">
+    </div>
+
+    <div class="hero-copy-text">
+
+      <div class="hero-reveal-item hero-ri-eyebrow">
+        <span class="hero-fw-eyebrow">Established 1963 · Ipoh, Malaysia</span>
+      </div>
+
+      <h1 class="hero-fw-title">
+        <span class="hero-line">
+          <span class="hero-line-inner">Sixty Years</span>
+        </span>
+        <span class="hero-line hero-line-em">
+          <span class="hero-line-inner"><em>of Ipoh's Finest</em></span>
+        </span>
+        <span class="hero-line">
+          <span class="hero-line-inner">Chinese Noodles</span>
+        </span>
+      </h1>
+
+      <div class="hero-divider hero-reveal-item hero-ri-divider" aria-hidden="true">
+        <span class="hero-divider-line"></span>
+        <span class="hero-divider-zh">怡 保 德 記</span>
+        <span class="hero-divider-line"></span>
+      </div>
+
+      <div class="hero-reveal-item hero-ri-actions">
+        <div class="hero-fw-actions">
+          <a href="menu.html"        class="btn btn-glass-primary   btn-lg btn-pill">Explore the Menu</a>
+          <a href="reservation.html" class="btn btn-glass-secondary btn-lg btn-pill">Get Directions</a>
+        </div>
+      </div>
+
+      <div class="hero-reveal-item hero-ri-trust">
+        <div class="hero-fw-trust" aria-label="Restaurant highlights">
+          <span><strong>3.8</strong><em>★</em></span>
+          <span class="hft-sep">·</span>
+          <span>3,095 reviews</span>
+          <span class="hft-sep">·</span>
+          <span>RM 20–40</span>
+          <span class="hft-sep">·</span>
+          <span>Since 1963</span>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span class="hero-scroll-label">Scroll</span>
+        <span class="hero-scroll-line"></span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</section>
+
+<!-- ── PRESS TICKER ────────────────────────────────────────── -->
+<section class="press-ticker-section" aria-label="As featured in">
+  <p class="press-ticker-label">As Featured In &amp; Recognised By</p>
+  <div class="press-ticker-track">
+    <div class="press-ticker-inner">
+
+      <!-- Logo: Google Reviews -->
+      <div class="ptk-item">
+        <div class="ptk-icon" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.5 14.27c0-.9-.08-1.77-.22-2.61H14v4.94h5.3a4.53 4.53 0 01-1.97 2.97v2.47h3.19C22.57 20.33 23.5 17.5 23.5 14.27z" fill="currentColor"/>
+            <path d="M14 24c2.67 0 4.91-.88 6.55-2.39l-3.2-2.47c-.88.6-2.01.95-3.35.95-2.58 0-4.77-1.74-5.55-4.08H5.17v2.55A9.99 9.99 0 0014 24z" fill="currentColor" opacity=".85"/>
+            <path d="M8.45 16.01A6.02 6.02 0 018.2 14c0-.7.12-1.37.25-2.01V9.44H5.17A10 10 0 004 14c0 1.61.39 3.13 1.07 4.49l3.38-2.48z" fill="currentColor" opacity=".7"/>
+            <path d="M14 7.91c1.46 0 2.77.5 3.8 1.48L20.6 6.6C18.9 5.04 16.67 4 14 4A9.99 9.99 0 005.17 9.44l3.28 2.55C9.23 9.65 11.42 7.91 14 7.91z" fill="currentColor" opacity=".9"/>
+          </svg>
+        </div>
+        <span class="ptk-name">Google Reviews</span>
+      </div>
+      <span class="ptk-dot" aria-hidden="true"></span>
+
+      <!-- Logo: TripAdvisor -->
+      <div class="ptk-item">
+        <div class="ptk-icon" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="15" r="5.5" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="19" cy="15" r="5.5" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="9" cy="15" r="2" fill="currentColor"/>
+            <circle cx="19" cy="15" r="2" fill="currentColor"/>
+            <path d="M4.5 12A9 9 0 0114 7.5 9 9 0 0123.5 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="ptk-name">TripAdvisor</span>
+      </div>
+      <span class="ptk-dot" aria-hidden="true"></span>
+
+      <!-- Logo: TimeOut Malaysia -->
+      <div class="ptk-item">
+        <div class="ptk-icon" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="1.6"/>
+            <line x1="14" y1="14" x2="14" y2="8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="14" y1="14" x2="18.5" y2="16.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="14" cy="14" r="1.2" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="ptk-name">TimeOut Malaysia</span>
+      </div>
+      <span class="ptk-dot" aria-hidden="true"></span>
+
+      <!-- Logo: The Star -->
+      <div class="ptk-item">
+        <div class="ptk-icon" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 3l2.7 8.3H24l-7 5.1 2.7 8.3L14 19.6l-5.7 5.1 2.7-8.3-7-5.1h7.3z" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="ptk-name">The Star</span>
+      </div>
+      <span class="ptk-dot" aria-hidden="true"></span>
+
+      <!-- Logo: NST Weekend -->
+      <div class="ptk-item">
+        <div class="ptk-icon" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="5" width="20" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/>
+            <line x1="4" y1="10" x2="24" y2="10" stroke="currentColor" stroke-width="1.4"/>
+            <line x1="8" y1="14.5" x2="20" y2="14.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            <line x1="8" y1="18" x2="16" y2="18" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            <text x="7" y="9.5" font-size="4.5" fill="currentColor" font-family="sans-serif" font-weight="700" letter-spacing="0.5">NST</text>
+          </svg>
+        </div>
+        <span class="ptk-name">NST Weekend</span>
+      </div>
+      <span class="ptk-dot" aria-hidden="true"></span>
+
+      <!-- Logo: foodpanda -->
+      <div class="ptk-item">
+        <div class="ptk-icon" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="15" r="9" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="9.5" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/>
+            <circle cx="18.5" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/>
+            <circle cx="11" cy="15" r="2.2" fill="currentColor"/>
+            <circle cx="17" cy="15" r="2.2" fill="currentColor"/>
+            <path d="M11 19.5c.8.8 5.2.8 6 0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="ptk-name">foodpanda</span>
+      </div>
+      <span class="ptk-dot" aria-hidden="true"></span>
+
+      <!-- Logo: OpenRice -->
+      <div class="ptk-item">
+        <div class="ptk-icon" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 13c0 0 0 8 9 8s9-8 9-8H5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <line x1="14" y1="13" x2="14" y2="6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M14 6c0 0-3-2-3-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M14 6c0 0 3-2 3-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <circle cx="9" cy="17" r="1" fill="currentColor"/>
+            <circle cx="14" cy="18.5" r="1" fill="currentColor"/>
+            <circle cx="19" cy="17" r="1" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="ptk-name">OpenRice</span>
+      </div>
+      <span class="ptk-dot" aria-hidden="true"></span>
+
+      <!-- Logo: GrabFood -->
+      <div class="ptk-item">
+        <div class="ptk-icon" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M19 14h-5v-2h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14 8a6 6 0 100 12 6 6 0 000-9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="ptk-name">GrabFood</span>
+      </div>
+      <span class="ptk-dot" aria-hidden="true"></span>
+
+      <!-- ── Duplicate set for seamless loop ── -->
+      <div class="ptk-item">
+        <div class="ptk-icon" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.5 14.27c0-.9-.08-1.77-.22-2.61H14v4.94h5.3a4.53 4.53 0 01-1.97 2.97v2.47h3.19C22.57 20.33 23.5 17.5 23.5 14.27z" fill="currentColor"/>
+            <path d="M14 24c2.67 0 4.91-.88 6.55-2.39l-3.2-2.47c-.88.6-2.01.95-3.35.95-2.58 0-4.77-1.74-5.55-4.08H5.17v2.55A9.99 9.99 0 0014 24z" fill="currentColor" opacity=".85"/>
+            <path d="M8.45 16.01A6.02 6.02 0 018.2 14c0-.7.12-1.37.25-2.01V9.44H5.17A10 10 0 004 14c0 1.61.39 3.13 1.07 4.49l3.38-2.48z" fill="currentColor" opacity=".7"/>
+            <path d="M14 7.91c1.46 0 2.77.5 3.8 1.48L20.6 6.6C18.9 5.04 16.67 4 14 4A9.99 9.99 0 005.17 9.44l3.28 2.55C9.23 9.65 11.42 7.91 14 7.91z" fill="currentColor" opacity=".9"/>
+          </svg>
+        </div>
+        <span class="ptk-name">Google Reviews</span>
+      </div>
+      <span class="ptk-dot" aria-hidden="true"></span>
+
+      <div class="ptk-item">
+        <div class="ptk-icon" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="15" r="5.5" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="19" cy="15" r="5.5" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="9" cy="15" r="2" fill="currentColor"/>
+            <circle cx="19" cy="15" r="2" fill="currentColor"/>
+            <path d="M4.5 12A9 9 0 0114 7.5 9 9 0 0123.5 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="ptk-name">TripAdvisor</span>
+      </div>
+      <span class="ptk-dot" aria-hidden="true"></span>
+
+      <div class="ptk-item">
+        <div class="ptk-icon" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="1.6"/>
+            <line x1="14" y1="14" x2="14" y2="8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="14" y1="14" x2="18.5" y2="16.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="14" cy="14" r="1.2" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="ptk-name">TimeOut Malaysia</span>
+      </div>
+      <span class="ptk-dot" aria-hidden="true"></span>
+
+      <div class="ptk-item">
+        <div class="ptk-icon" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 3l2.7 8.3H24l-7 5.1 2.7 8.3L14 19.6l-5.7 5.1 2.7-8.3-7-5.1h7.3z" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="ptk-name">The Star</span>
+      </div>
+      <span class="ptk-dot" aria-hidden="true"></span>
+
+      <div class="ptk-item">
+        <div class="ptk-icon" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="5" width="20" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/>
+            <line x1="4" y1="10" x2="24" y2="10" stroke="currentColor" stroke-width="1.4"/>
+            <line x1="8" y1="14.5" x2="20" y2="14.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            <line x1="8" y1="18" x2="16" y2="18" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            <text x="7" y="9.5" font-size="4.5" fill="currentColor" font-family="sans-serif" font-weight="700" letter-spacing="0.5">NST</text>
+          </svg>
+        </div>
+        <span class="ptk-name">NST Weekend</span>
+      </div>
+      <span class="ptk-dot" aria-hidden="true"></span>
+
+      <div class="ptk-item">
+        <div class="ptk-icon" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="15" r="9" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="9.5" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/>
+            <circle cx="18.5" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/>
+            <circle cx="11" cy="15" r="2.2" fill="currentColor"/>
+            <circle cx="17" cy="15" r="2.2" fill="currentColor"/>
+            <path d="M11 19.5c.8.8 5.2.8 6 0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="ptk-name">foodpanda</span>
+      </div>
+      <span class="ptk-dot" aria-hidden="true"></span>
+
+      <div class="ptk-item">
+        <div class="ptk-icon" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 13c0 0 0 8 9 8s9-8 9-8H5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <line x1="14" y1="13" x2="14" y2="6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M14 6c0 0-3-2-3-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M14 6c0 0 3-2 3-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <circle cx="9" cy="17" r="1" fill="currentColor"/>
+            <circle cx="14" cy="18.5" r="1" fill="currentColor"/>
+            <circle cx="19" cy="17" r="1" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="ptk-name">OpenRice</span>
+      </div>
+      <span class="ptk-dot" aria-hidden="true"></span>
+
+      <div class="ptk-item">
+        <div class="ptk-icon" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M19 14h-5v-2h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14 8a6 6 0 100 12 6 6 0 000-9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="ptk-name">GrabFood</span>
+      </div>
+      <span class="ptk-dot" aria-hidden="true"></span>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── ORBITAL DISH GALLERY ──────────────────────────────── -->
+<section class="orb-section" id="strip" aria-label="Signature dishes">
+  <div class="orb-header">
+    <span class="eyebrow eyebrow-gold">What We Do Best</span>
+  </div>
+  <div class="orb-stage">
+
+    <!-- Rotating group: spokes + cards orbit together; hub stays fixed -->
+    <div class="orb-ring-group">
+
+      <!-- SVG connector spokes -->
+      <svg class="orb-spokes" viewBox="0 0 900 680" preserveAspectRatio="none" aria-hidden="true">
+        <line x1="450" y1="340" x2="450" y2="110"/>
+        <line x1="450" y1="340" x2="669" y2="269"/>
+        <line x1="450" y1="340" x2="585" y2="526"/>
+        <line x1="450" y1="340" x2="315" y2="526"/>
+        <line x1="450" y1="340" x2="231" y2="269"/>
+      </svg>
+
+      <!-- Card 1: Yu Kong Hor (top) -->
+      <div class="orb-card oc-1">
+        <div class="orb-card-panel"></div>
+        <div class="orb-card-body">
+          <span class="orb-tag">House Favourite</span>
+          <h3 class="orb-name-en">Yu Kong Hor</h3>
+          <p class="orb-name-zh">魚丸河粉</p>
+          <div class="orb-rule"></div>
+          <p class="orb-desc">Handmade fish balls in a clear savoury broth over silky flat rice noodles.</p>
+          <span class="orb-price">RM 10</span>
+        </div>
+      </div>
+
+      <!-- Card 2: Wok-Fried Squid (upper-right) -->
+      <div class="orb-card oc-2">
+        <div class="orb-card-panel"></div>
+        <div class="orb-card-body">
+          <span class="orb-tag">Wok Mastery</span>
+          <h3 class="orb-name-en">Wok-Fried Squid</h3>
+          <p class="orb-name-zh">炒魷魚</p>
+          <div class="orb-rule"></div>
+          <p class="orb-desc">Tender fresh squid scorched over a roaring flame with garlic and our house dark sauce.</p>
+          <span class="orb-price">RM 22</span>
+        </div>
+      </div>
+
+      <!-- Card 3: Prawn Har Mee (lower-right) -->
+      <div class="orb-card oc-3">
+        <div class="orb-card-panel"></div>
+        <div class="orb-card-body">
+          <span class="orb-tag">Since 1963</span>
+          <h3 class="orb-name-en">Prawn Har Mee</h3>
+          <p class="orb-name-zh">鮮蝦麵</p>
+          <div class="orb-rule"></div>
+          <p class="orb-desc">Deep prawn stock, springy yellow noodles and shell-on fresh river prawns in every bowl.</p>
+          <span class="orb-price">RM 15</span>
+        </div>
+      </div>
+
+      <!-- Card 4: Bean Sprout Chicken (lower-left) -->
+      <div class="orb-card oc-4">
+        <div class="orb-card-panel"></div>
+        <div class="orb-card-body">
+          <span class="orb-tag">Ipoh Classic</span>
+          <h3 class="orb-name-en">Bean Sprout Chicken</h3>
+          <p class="orb-name-zh">芽菜雞</p>
+          <div class="orb-rule"></div>
+          <p class="orb-desc">Ipoh's most celebrated dish — slow-poached kampung chicken over crisp local bean sprouts.</p>
+          <span class="orb-price">RM 18</span>
+        </div>
+      </div>
+
+      <!-- Card 5: Dry Chili Pan Mee (upper-left) -->
+      <div class="orb-card oc-5">
+        <div class="orb-card-panel"></div>
+        <div class="orb-card-body">
+          <span class="orb-tag">Crowd Pleaser</span>
+          <h3 class="orb-name-en">Dry Chili Pan Mee</h3>
+          <p class="orb-name-zh">辣椒板麵</p>
+          <div class="orb-rule"></div>
+          <p class="orb-desc">Hand-torn noodles, crispy anchovies, soft poached egg and house dried chili crunch.</p>
+          <span class="orb-price">RM 11</span>
+        </div>
+      </div>
+
+    </div><!-- /orb-ring-group -->
+
+    <!-- Center hub — fixed, outside the rotating group -->
+    <div class="orb-hub" aria-hidden="true">
+      <div class="orb-ring orb-ring-a"></div>
+      <div class="orb-ring orb-ring-b"></div>
+      <div class="orb-hub-core">
+        <span class="orb-hub-char">德記</span>
+        <span class="orb-hub-sub">since 1963</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+<div style="display:none"><div>
+
+      <!-- Card 1: Yu Kong Hor -->
+      <div class="ftk-wrap">
+        <div class="ftk-card">
+          <span class="ftk-wm" aria-hidden="true">魚</span>
+          <div class="ftk-body">
+            <div class="ftk-icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21Q7 36 22 38Q37 36 37 21"/><line x1="5" y1="21" x2="39" y2="21"/><path d="M11 25Q15 23 19 25Q23 27 27 25Q31 23 35 25"/><circle cx="15" cy="31" r="2.8"/><circle cx="22" cy="30" r="2.8"/><circle cx="29" cy="31" r="2.8"/><path d="M16 15Q14 12 16 9" opacity=".5"/><path d="M28 15Q26 12 28 9" opacity=".5"/></svg></div>
+            <span class="ftk-tag">House Favourite</span>
+            <h3 class="ftk-name-en">Yu Kong Hor</h3>
+            <p class="ftk-name-zh">魚丸河粉</p>
+            <div class="ftk-rule"></div>
+            <p class="ftk-desc">Handmade fish balls in a clear savoury broth over silky flat rice noodles.</p>
+            <span class="ftk-price">RM 10</span>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Card 2: Wok-Fried Squid -->
+      <div class="ftk-wrap">
+        <div class="ftk-card">
+          <span class="ftk-wm" aria-hidden="true">魷</span>
+          <div class="ftk-body">
+            <div class="ftk-icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="22" cy="17" rx="11" ry="9"/><path d="M22 8Q22 5 22 3"/><path d="M13 25Q11 32 13 39"/><path d="M17 26Q16 33 17 40"/><path d="M22 27Q22 34 22 41"/><path d="M27 26Q28 33 27 40"/><path d="M31 25Q33 32 31 39"/><circle cx="17" cy="15" r="2.2" fill="currentColor" opacity=".45"/><circle cx="27" cy="15" r="2.2" fill="currentColor" opacity=".45"/></svg></div>
+            <span class="ftk-tag">Wok Mastery</span>
+            <h3 class="ftk-name-en">Wok-Fried Squid</h3>
+            <p class="ftk-name-zh">炒魷魚</p>
+            <div class="ftk-rule"></div>
+            <p class="ftk-desc">Tender fresh squid scorched over a roaring flame with garlic and our house dark sauce.</p>
+            <span class="ftk-price">RM 22</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Prawn Har Mee -->
+      <div class="ftk-wrap">
+        <div class="ftk-card">
+          <span class="ftk-wm" aria-hidden="true">蝦</span>
+          <div class="ftk-body">
+            <div class="ftk-icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 30Q10 20 18 14Q26 8 32 12Q38 16 36 26Q34 36 26 40Q18 44 12 38Q8 34 8 30z"/><path d="M14 18Q15 25 12 32" opacity=".4"/><path d="M21 13Q22 20 20 28" opacity=".4"/><path d="M29 14Q30 21 28 29" opacity=".4"/><path d="M8 30Q4 26 4 18"/><path d="M9 26Q5 22 6 14"/><path d="M36 26Q40 22 42 14"/><path d="M35 30Q40 28 42 22"/><path d="M34 34Q40 34 40 28"/><circle cx="10" cy="28" r="2" fill="currentColor" opacity=".5"/></svg></div>
+            <span class="ftk-tag">Since 1963</span>
+            <h3 class="ftk-name-en">Prawn Har Mee</h3>
+            <p class="ftk-name-zh">鮮蝦麵</p>
+            <div class="ftk-rule"></div>
+            <p class="ftk-desc">Deep prawn stock, springy yellow noodles and shell-on fresh river prawns in every bowl.</p>
+            <span class="ftk-price">RM 15</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: Bean Sprout Chicken -->
+      <div class="ftk-wrap">
+        <div class="ftk-card">
+          <span class="ftk-wm" aria-hidden="true">雞</span>
+          <div class="ftk-body">
+            <div class="ftk-icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7Q23 5 28 11Q33 18 28 27Q26 31 22 33Q18 35 14 31Q10 27 12 18Q14 9 17 7z"/><circle cx="21" cy="36" r="3.5"/><line x1="21" y1="33" x2="23" y2="41"/><line x1="31" y1="22" x2="31" y2="10"/><path d="M31 16Q37 12 39 15"/><path d="M31 20Q25 16 25 19"/><circle cx="31" cy="9" r="2.8"/></svg></div>
+            <span class="ftk-tag">Ipoh Classic</span>
+            <h3 class="ftk-name-en">Bean Sprout Chicken</h3>
+            <p class="ftk-name-zh">芽菜雞</p>
+            <div class="ftk-rule"></div>
+            <p class="ftk-desc">Ipoh's most celebrated dish — slow-poached kampung chicken over crisp local bean sprouts.</p>
+            <span class="ftk-price">RM 18</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5: Dry Chili Pan Mee -->
+      <div class="ftk-wrap">
+        <div class="ftk-card">
+          <span class="ftk-wm" aria-hidden="true">辣</span>
+          <div class="ftk-body">
+            <div class="ftk-icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M25 5Q32 7 36 14Q40 21 36 30Q32 38 25 39Q18 40 14 33Q10 26 13 17Q17 7 25 5z"/><path d="M25 5Q25 2 27 1"/><path d="M26 4Q32 2 32 7" opacity=".6"/><path d="M20 13Q18 20 20 28" opacity=".35"/><path d="M6 28Q10 26 12 30Q10 34 6 32Q4 30 6 28z"/><circle cx="8" cy="21" r="3.5" stroke-width="1.4"/><circle cx="8" cy="21" r="1.5" fill="currentColor" opacity=".5"/></svg></div>
+            <span class="ftk-tag">Crowd Pleaser</span>
+            <h3 class="ftk-name-en">Dry Chili Pan Mee</h3>
+            <p class="ftk-name-zh">辣椒板麵</p>
+            <div class="ftk-rule"></div>
+            <p class="ftk-desc">Hand-torn noodles, crispy anchovies, soft poached egg and house dried chili crunch.</p>
+            <span class="ftk-price">RM 11</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Duplicate set for seamless loop ── -->
+      <div class="ftk-wrap">
+        <div class="ftk-card">
+          <span class="ftk-wm" aria-hidden="true">魚</span>
+          <div class="ftk-body">
+            <div class="ftk-icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21Q7 36 22 38Q37 36 37 21"/><line x1="5" y1="21" x2="39" y2="21"/><path d="M11 25Q15 23 19 25Q23 27 27 25Q31 23 35 25"/><circle cx="15" cy="31" r="2.8"/><circle cx="22" cy="30" r="2.8"/><circle cx="29" cy="31" r="2.8"/><path d="M16 15Q14 12 16 9" opacity=".5"/><path d="M28 15Q26 12 28 9" opacity=".5"/></svg></div>
+            <span class="ftk-tag">House Favourite</span>
+            <h3 class="ftk-name-en">Yu Kong Hor</h3>
+            <p class="ftk-name-zh">魚丸河粉</p>
+            <div class="ftk-rule"></div>
+            <p class="ftk-desc">Handmade fish balls in a clear savoury broth over silky flat rice noodles.</p>
+            <span class="ftk-price">RM 10</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ftk-wrap">
+        <div class="ftk-card">
+          <span class="ftk-wm" aria-hidden="true">魷</span>
+          <div class="ftk-body">
+            <div class="ftk-icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="22" cy="17" rx="11" ry="9"/><path d="M22 8Q22 5 22 3"/><path d="M13 25Q11 32 13 39"/><path d="M17 26Q16 33 17 40"/><path d="M22 27Q22 34 22 41"/><path d="M27 26Q28 33 27 40"/><path d="M31 25Q33 32 31 39"/><circle cx="17" cy="15" r="2.2" fill="currentColor" opacity=".45"/><circle cx="27" cy="15" r="2.2" fill="currentColor" opacity=".45"/></svg></div>
+            <span class="ftk-tag">Wok Mastery</span>
+            <h3 class="ftk-name-en">Wok-Fried Squid</h3>
+            <p class="ftk-name-zh">炒魷魚</p>
+            <div class="ftk-rule"></div>
+            <p class="ftk-desc">Tender fresh squid scorched over a roaring flame with garlic and our house dark sauce.</p>
+            <span class="ftk-price">RM 22</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ftk-wrap">
+        <div class="ftk-card">
+          <span class="ftk-wm" aria-hidden="true">蝦</span>
+          <div class="ftk-body">
+            <div class="ftk-icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 30Q10 20 18 14Q26 8 32 12Q38 16 36 26Q34 36 26 40Q18 44 12 38Q8 34 8 30z"/><path d="M14 18Q15 25 12 32" opacity=".4"/><path d="M21 13Q22 20 20 28" opacity=".4"/><path d="M29 14Q30 21 28 29" opacity=".4"/><path d="M8 30Q4 26 4 18"/><path d="M9 26Q5 22 6 14"/><path d="M36 26Q40 22 42 14"/><path d="M35 30Q40 28 42 22"/><path d="M34 34Q40 34 40 28"/><circle cx="10" cy="28" r="2" fill="currentColor" opacity=".5"/></svg></div>
+            <span class="ftk-tag">Since 1963</span>
+            <h3 class="ftk-name-en">Prawn Har Mee</h3>
+            <p class="ftk-name-zh">鮮蝦麵</p>
+            <div class="ftk-rule"></div>
+            <p class="ftk-desc">Deep prawn stock, springy yellow noodles and shell-on fresh river prawns in every bowl.</p>
+            <span class="ftk-price">RM 15</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ftk-wrap">
+        <div class="ftk-card">
+          <span class="ftk-wm" aria-hidden="true">雞</span>
+          <div class="ftk-body">
+            <div class="ftk-icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7Q23 5 28 11Q33 18 28 27Q26 31 22 33Q18 35 14 31Q10 27 12 18Q14 9 17 7z"/><circle cx="21" cy="36" r="3.5"/><line x1="21" y1="33" x2="23" y2="41"/><line x1="31" y1="22" x2="31" y2="10"/><path d="M31 16Q37 12 39 15"/><path d="M31 20Q25 16 25 19"/><circle cx="31" cy="9" r="2.8"/></svg></div>
+            <span class="ftk-tag">Ipoh Classic</span>
+            <h3 class="ftk-name-en">Bean Sprout Chicken</h3>
+            <p class="ftk-name-zh">芽菜雞</p>
+            <div class="ftk-rule"></div>
+            <p class="ftk-desc">Ipoh's most celebrated dish — slow-poached kampung chicken over crisp local bean sprouts.</p>
+            <span class="ftk-price">RM 18</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ftk-wrap">
+        <div class="ftk-card">
+          <span class="ftk-wm" aria-hidden="true">辣</span>
+          <div class="ftk-body">
+            <div class="ftk-icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M25 5Q32 7 36 14Q40 21 36 30Q32 38 25 39Q18 40 14 33Q10 26 13 17Q17 7 25 5z"/><path d="M25 5Q25 2 27 1"/><path d="M26 4Q32 2 32 7" opacity=".6"/><path d="M20 13Q18 20 20 28" opacity=".35"/><path d="M6 28Q10 26 12 30Q10 34 6 32Q4 30 6 28z"/><circle cx="8" cy="21" r="3.5" stroke-width="1.4"/><circle cx="8" cy="21" r="1.5" fill="currentColor" opacity=".5"/></svg></div>
+            <span class="ftk-tag">Crowd Pleaser</span>
+            <h3 class="ftk-name-en">Dry Chili Pan Mee</h3>
+            <p class="ftk-name-zh">辣椒板麵</p>
+            <div class="ftk-rule"></div>
+            <p class="ftk-desc">Hand-torn noodles, crispy anchovies, soft poached egg and house dried chili crunch.</p>
+            <span class="ftk-price">RM 11</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ── ATMOSPHERIC SECTION ─────────────────────────────────── -->
+<section class="atmo-section" aria-labelledby="atmo-h">
+  <div class="atmo-bg-char" aria-hidden="true">記</div>
+  <div class="atmo-inner wrap">
+
+    <div class="atmo-left">
+      <span class="eyebrow eyebrow-gold atmo-reveal atmo-eyebrow">Since 1963 · Ipoh's Own</span>
+      <h2 class="atmo-headline" id="atmo-h">
+        <span class="atmo-reveal atmo-line-1">Authentic.</span>
+        <span class="atmo-reveal atmo-line-2">Handmade.</span>
+        <em class="atmo-reveal atmo-line-3">Since 1963.</em>
+      </h2>
+      <p class="atmo-body atmo-reveal atmo-body">
+        Every fish ball in our kitchen is hand-rolled before sunrise — the same way it was done
+        the morning we opened. No shortcuts. No suppliers. No compromise.
+        That is the only recipe Tuck Kee has ever followed.
+      </p>
+      <div class="atmo-cta-row atmo-reveal atmo-cta-row">
+        <a href="story.html" class="btn btn-ghost-gold btn-pill">Read Our Story</a>
+        <span class="atmo-note">Est. 1963 · 三代傳承</span>
+      </div>
+    </div>
+
+    <div class="atmo-right" aria-label="Key facts">
+      <div class="atmo-stat atmo-reveal atmo-stat-0">
+        <div class="atmo-stat-val" data-count="60" data-suffix="+">60+</div>
+        <div class="atmo-stat-label">Years on the same corner</div>
+      </div>
+      <div class="atmo-stat atmo-reveal atmo-stat-1">
+        <div class="atmo-stat-val" data-count="3095" data-prefix="" data-suffix="">3<em>,</em>095</div>
+        <div class="atmo-stat-label">Google Reviews · 3.8★ Rating</div>
+      </div>
+      <div class="atmo-stat atmo-reveal atmo-stat-2">
+        <div class="atmo-stat-val"><em>6</em> AM</div>
+        <div class="atmo-stat-label">When fish balls are hand-rolled daily</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── SIGNATURE DISHES ───────────────────────────────────── -->
+<section class="dishes-section section" aria-labelledby="dishes-h">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow sec-reveal sr-1">Signature Dishes</span>
+      <h2 id="dishes-h" class="sec-reveal sr-2">The Bowls that<br><em>Built Our Name</em></h2>
+      <div class="brushstroke sec-reveal sr-3" aria-hidden="true"><span>家</span></div>
+      <p class="section-head-sub sec-reveal sr-4">Three dishes that locals drive across town for. Three reasons we've never left this corner.</p>
+    </div>
+
+    <div class="dishes-grid">
+
+      <article class="d-card">
+        <div class="d-card-img">
+          <div class="d-img-1" style="height:100%"></div>
+          <div class="d-card-overlay"><span class="d-card-overlay-label">Explore Dish →</span></div>
+          <div class="d-card-badge">Most Popular</div>
+          <span class="d-card-zh-mark">魚</span>
+        </div>
+        <div class="d-card-body">
+          <h3 class="d-card-name">Yu Kong Hor</h3>
+          <p class="d-card-zh">魚丸河粉</p>
+          <p class="d-card-desc">Silky flat rice noodles in a clear, deeply savory broth with fish balls hand-rolled at dawn.</p>
+          <div class="d-card-foot">
+            <span class="d-card-price">From RM 10</span>
+            <a href="menu.html" class="d-card-link">In the menu →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="d-card">
+        <div class="d-card-img">
+          <div class="d-img-2" style="height:100%"></div>
+          <div class="d-card-overlay"><span class="d-card-overlay-label">Explore Dish →</span></div>
+          <div class="d-card-badge">Chef's Pick</div>
+          <span class="d-card-zh-mark">魷</span>
+        </div>
+        <div class="d-card-body">
+          <h3 class="d-card-name">Wok-Fried Squid</h3>
+          <p class="d-card-zh">炒魷魚</p>
+          <p class="d-card-desc">Tender squid tossed over a fierce flame with aromatic garlic, ginger and our house sauce.</p>
+          <div class="d-card-foot">
+            <span class="d-card-price">From RM 22</span>
+            <a href="menu.html" class="d-card-link">In the menu →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="d-card">
+        <div class="d-card-img">
+          <div class="d-img-3" style="height:100%"></div>
+          <div class="d-card-overlay"><span class="d-card-overlay-label">Explore Dish →</span></div>
+          <div class="d-card-badge">House Special</div>
+          <span class="d-card-zh-mark">蛋</span>
+        </div>
+        <div class="d-card-body">
+          <h3 class="d-card-name">Smooth Egg Noodles</h3>
+          <p class="d-card-zh">滑蛋河</p>
+          <p class="d-card-desc">Flat rice noodles enveloped in velvety golden egg gravy — a timeless Tuck Kee classic.</p>
+          <div class="d-card-foot">
+            <span class="d-card-price">From RM 11</span>
+            <a href="menu.html" class="d-card-link">In the menu →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="dishes-cta sec-reveal sr-4">
+      <a href="menu.html" class="btn btn-ink btn-lg btn-pill">View the Full Menu</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── GOOGLE REVIEWS VERTICAL SCROLL ─────────────────────── -->
+<section class="grev-section" aria-label="Google Reviews">
+
+  <!-- Header -->
+  <div class="grev-header">
+    <span class="eyebrow eyebrow-gold">What Our Guests Say</span>
+    <h2 class="grev-title">Voices from <em>3,095</em> Reviews</h2>
+    <div class="grev-agg-row">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-label="Google"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+      <span class="grev-score-inline">4.2</span>
+      <span class="grev-stars-row">★★★★★</span>
+      <span class="grev-on-google">on Google</span>
+    </div>
+  </div>
+
+  <!-- 3-column vertical scroll -->
+  <div class="grev-cols-wrap" aria-hidden="true">
+    <!-- top + bottom fade masks -->
+
+    <!-- Column 1 — scrolls UP -->
+    <div class="grev-col grev-col--up">
+      <div class="grev-col-inner">
+        <article class="grev-card"><div class="grev-card-top"><div class="grev-avatar" style="--av-bg:#4285F4">L</div><div class="grev-reviewer"><span class="grev-name">Lee Wei Ming</span><span class="grev-date">2 months ago</span></div></div><div class="grev-stars">★★★★★</div><p class="grev-text">"The baby octopus with soy sauce was light and soft. The fried chicken wings were crispy and yummy too. The fish noodles had a unique texture — worth a try."</p></article>
+        <article class="grev-card"><div class="grev-card-top"><div class="grev-avatar" style="--av-bg:#B68A38">K</div><div class="grev-reviewer"><span class="grev-name">Kevin Loh</span><span class="grev-date">3 weeks ago</span></div></div><div class="grev-stars">★★★★★</div><p class="grev-text">"Waited 20 minutes on a weekday and it was absolutely worth it. The char siu paired with the noodles is incredible. A true Perak institution."</p></article>
+        <article class="grev-card"><div class="grev-card-top"><div class="grev-avatar" style="--av-bg:#4285F4">M</div><div class="grev-reviewer"><span class="grev-name">Mei Lin</span><span class="grev-date">2 weeks ago</span></div></div><div class="grev-stars">★★★★★</div><p class="grev-text">"Three generations of skill in every bowl. My whole family drove from Penang just to eat here — zero regrets. The soup base alone is worth the trip."</p></article>
+        <!-- duplicate for seamless loop -->
+        <article class="grev-card"><div class="grev-card-top"><div class="grev-avatar" style="--av-bg:#4285F4">L</div><div class="grev-reviewer"><span class="grev-name">Lee Wei Ming</span><span class="grev-date">2 months ago</span></div></div><div class="grev-stars">★★★★★</div><p class="grev-text">"The baby octopus with soy sauce was light and soft. The fried chicken wings were crispy and yummy too. The fish noodles had a unique texture — worth a try."</p></article>
+        <article class="grev-card"><div class="grev-card-top"><div class="grev-avatar" style="--av-bg:#B68A38">K</div><div class="grev-reviewer"><span class="grev-name">Kevin Loh</span><span class="grev-date">3 weeks ago</span></div></div><div class="grev-stars">★★★★★</div><p class="grev-text">"Waited 20 minutes on a weekday and it was absolutely worth it. The char siu paired with the noodles is incredible. A true Perak institution."</p></article>
+        <article class="grev-card"><div class="grev-card-top"><div class="grev-avatar" style="--av-bg:#4285F4">M</div><div class="grev-reviewer"><span class="grev-name">Mei Lin</span><span class="grev-date">2 weeks ago</span></div></div><div class="grev-stars">★★★★★</div><p class="grev-text">"Three generations of skill in every bowl. My whole family drove from Penang just to eat here — zero regrets. The soup base alone is worth the trip."</p></article>
+      </div>
+    </div>
+
+    <!-- Column 2 — scrolls DOWN -->
+    <div class="grev-col grev-col--down">
+      <div class="grev-col-inner">
+        <article class="grev-card"><div class="grev-card-top"><div class="grev-avatar" style="--av-bg:#34A853">A</div><div class="grev-reviewer"><span class="grev-name">Ahmad Faisal</span><span class="grev-date">5 months ago</span></div></div><div class="grev-stars">★★★★★</div><p class="grev-text">"Been coming here since I was a kid with my grandfather. The fish noodles taste exactly the same — some things should never change."</p></article>
+        <article class="grev-card"><div class="grev-card-top"><div class="grev-avatar" style="--av-bg:#3D6B4F">S</div><div class="grev-reviewer"><span class="grev-name">Sarah Tan</span><span class="grev-date">4 months ago</span></div></div><div class="grev-stars">★★★★★</div><p class="grev-text">"A true Ipoh institution. If you're visiting from KL, this is a non-negotiable stop. The egg noodles are handmade — you can taste the difference."</p></article>
+        <article class="grev-card"><div class="grev-card-top"><div class="grev-avatar" style="--av-bg:#FBBC05;color:#1A1410">R</div><div class="grev-reviewer"><span class="grev-name">Raj Kumar</span><span class="grev-date">7 months ago</span></div></div><div class="grev-stars">★★★★★</div><p class="grev-text">"Understated, authentic, unforgettable. No frills, just 60 years of perfected technique. The kind of place that reminds you why food matters."</p></article>
+        <!-- duplicate -->
+        <article class="grev-card"><div class="grev-card-top"><div class="grev-avatar" style="--av-bg:#34A853">A</div><div class="grev-reviewer"><span class="grev-name">Ahmad Faisal</span><span class="grev-date">5 months ago</span></div></div><div class="grev-stars">★★★★★</div><p class="grev-text">"Been coming here since I was a kid with my grandfather. The fish noodles taste exactly the same — some things should never change."</p></article>
+        <article class="grev-card"><div class="grev-card-top"><div class="grev-avatar" style="--av-bg:#3D6B4F">S</div><div class="grev-reviewer"><span class="grev-name">Sarah Tan</span><span class="grev-date">4 months ago</span></div></div><div class="grev-stars">★★★★★</div><p class="grev-text">"A true Ipoh institution. If you're visiting from KL, this is a non-negotiable stop. The egg noodles are handmade — you can taste the difference."</p></article>
+        <article class="grev-card"><div class="grev-card-top"><div class="grev-avatar" style="--av-bg:#FBBC05;color:#1A1410">R</div><div class="grev-reviewer"><span class="grev-name">Raj Kumar</span><span class="grev-date">7 months ago</span></div></div><div class="grev-stars">★★★★★</div><p class="grev-text">"Understated, authentic, unforgettable. No frills, just 60 years of perfected technique. The kind of place that reminds you why food matters."</p></article>
+      </div>
+    </div>
+
+    <!-- Column 3 — scrolls UP (slower) -->
+    <div class="grev-col grev-col--up grev-col--slow">
+      <div class="grev-col-inner">
+        <article class="grev-card"><div class="grev-card-top"><div class="grev-avatar" style="--av-bg:#EA4335">P</div><div class="grev-reviewer"><span class="grev-name">Priya Nair</span><span class="grev-date">1 month ago</span></div></div><div class="grev-stars">★★★★★</div><p class="grev-text">"Best fish noodles in Ipoh. No question. The broth is rich, the noodles are smooth, and the portions are generous. Drove from KL just for this."</p></article>
+        <article class="grev-card"><div class="grev-card-top"><div class="grev-avatar" style="--av-bg:#8A1F10">J</div><div class="grev-reviewer"><span class="grev-name">James Wong</span><span class="grev-date">6 months ago</span></div></div><div class="grev-stars">★★★★★</div><p class="grev-text">"Simple, honest food done exceptionally well. The roasted pork belly — crispy outside, melt-in-your-mouth inside. I bring every out-of-town guest here."</p></article>
+        <article class="grev-card"><div class="grev-card-top"><div class="grev-avatar" style="--av-bg:#214830">C</div><div class="grev-reviewer"><span class="grev-name">Chong Wai Kit</span><span class="grev-date">3 months ago</span></div></div><div class="grev-stars">★★★★★</div><p class="grev-text">"Outdoor setting, old-school ambience, and the best wonton noodle soup I've had in years. The wonton skins are thin, the filling generous — a masterclass."</p></article>
+        <!-- duplicate -->
+        <article class="grev-card"><div class="grev-card-top"><div class="grev-avatar" style="--av-bg:#EA4335">P</div><div class="grev-reviewer"><span class="grev-name">Priya Nair</span><span class="grev-date">1 month ago</span></div></div><div class="grev-stars">★★★★★</div><p class="grev-text">"Best fish noodles in Ipoh. No question. The broth is rich, the noodles are smooth, and the portions are generous. Drove from KL just for this."</p></article>
+        <article class="grev-card"><div class="grev-card-top"><div class="grev-avatar" style="--av-bg:#8A1F10">J</div><div class="grev-reviewer"><span class="grev-name">James Wong</span><span class="grev-date">6 months ago</span></div></div><div class="grev-stars">★★★★★</div><p class="grev-text">"Simple, honest food done exceptionally well. The roasted pork belly — crispy outside, melt-in-your-mouth inside. I bring every out-of-town guest here."</p></article>
+        <article class="grev-card"><div class="grev-card-top"><div class="grev-avatar" style="--av-bg:#214830">C</div><div class="grev-reviewer"><span class="grev-name">Chong Wai Kit</span><span class="grev-date">3 months ago</span></div></div><div class="grev-stars">★★★★★</div><p class="grev-text">"Outdoor setting, old-school ambience, and the best wonton noodle soup I've had in years. The wonton skins are thin, the filling generous — a masterclass."</p></article>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer CTA -->
+  <div class="grev-footer">
+    <a href="https://maps.google.com/search?q=Ipoh+Tuck+Kee+Restaurant" target="_blank" rel="noopener noreferrer" class="grev-cta">
+      View all 3,095 reviews on Google
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+    </a>
+  </div>
+
+</section>
+
+<!-- ── VISIT SPLIT ────────────────────────────────────────── -->
+<section class="visit-split" aria-label="Visit us">
+
+  <div class="visit-dark">
+    <div class="visit-dark-wrap">
+    <!-- Left: contact info -->
+    <div class="visit-dark-info">
+      <span class="eyebrow eyebrow-gold vs-reveal vs-r1">Come Visit</span>
+      <h2 class="visit-title vs-reveal vs-r2">Find Us in Ipoh</h2>
+      <div class="contact-list">
+        <div class="contact-row vs-reveal vs-r3">
+          <div class="contact-icon-wrap" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Address</div>
+            <div class="contact-val">61, Jalan Yau Tet Shin</div>
+            <div class="contact-sub">Taman Jubilee · 30300 Ipoh, Perak</div>
+          </div>
+        </div>
+        <div class="contact-row vs-reveal vs-r4">
+          <div class="contact-icon-wrap" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Call Ahead</div>
+            <a href="tel:016-2209361" class="contact-val">016-220 9361</a>
+            <div class="contact-sub">For groups of 8+ or to ask about today</div>
+          </div>
+        </div>
+        <div class="contact-row vs-reveal vs-r5">
+          <div class="contact-icon-wrap" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Seating</div>
+            <div class="contact-val">Outdoor · Walk-in</div>
+            <div class="contact-sub">No reservations needed · Just arrive</div>
+          </div>
+        </div>
+      </div>
+      <a href="https://maps.google.com/?q=Ipoh+Tuck+Kee+Restaurant+61+Jalan+Yau+Tet+Shin" target="_blank" rel="noopener noreferrer" class="btn btn-ghost-gold btn-pill vs-reveal vs-r6" style="margin-top:40px;display:inline-flex">
+        Open in Google Maps
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+      </a>
+    </div>
+    <!-- Right: map -->
+    <div class="visit-map-embed vs-reveal vs-r7">
+      <iframe
+        src="https://maps.google.com/maps?q=61+Jalan+Yau+Tet+Shin+Taman+Jubilee+30300+Ipoh+Perak&t=&z=17&ie=UTF8&iwloc=&output=embed"
+        width="100%" height="100%"
+        style="border:0;min-height:380px" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Ipoh Tuck Kee Restaurant — 61 Jalan Yau Tet Shin"></iframe>
+    </div>
+    </div><!-- /visit-dark-wrap -->
+  </div>
+
+  <div class="visit-form-panel">
+    <div class="visit-form-inner">
+    <span class="eyebrow vf-reveal vf-r1">Walk-In Welcome · 歡迎光臨</span>
+    <h2 class="vf-title vf-reveal vf-r2">Plan Your Visit</h2>
+    <p class="vf-sub vf-reveal vf-r3">No reservations needed — just turn up. Let us know you're coming for groups of 6+.</p>
+
+    <form class="visit-form" id="visitForm" novalidate>
+      <div class="form-row vf-reveal vf-r4" style="margin-bottom:18px">
+        <div class="form-group" style="margin-bottom:0">
+          <label class="form-label" for="vf-name">Your Name</label>
+          <input class="form-input" id="vf-name" type="text" placeholder="e.g. Lee Mei Ling" autocomplete="name">
+        </div>
+        <div class="form-group" style="margin-bottom:0">
+          <label class="form-label" for="vf-phone">Phone Number</label>
+          <input class="form-input" id="vf-phone" type="tel" placeholder="01x-xxx xxxx" autocomplete="tel">
+        </div>
+      </div>
+      <div class="form-row vf-reveal vf-r5" style="margin-bottom:18px">
+        <div class="form-group" style="margin-bottom:0">
+          <label class="form-label" for="vf-date">Date</label>
+          <input class="form-input" id="vf-date" type="date">
+        </div>
+        <div class="form-group" style="margin-bottom:0">
+          <label class="form-label" for="vf-pax">Party Size</label>
+          <select class="form-select" id="vf-pax">
+            <option value="">Select guests</option>
+            <option>1 – 2 guests</option>
+            <option>3 – 5 guests</option>
+            <option>6 – 10 guests</option>
+            <option>11 – 20 guests</option>
+            <option>20+ guests</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-glass btn-lg btn-pill vf-reveal vf-r6" style="width:100%;justify-content:center;margin-top:8px">
+        Send Us a Message
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+    </form>
+
+    <p style="margin-top:18px;font-size:0.76rem;color:rgba(255,255,255,0.38);line-height:1.6;position:relative;z-index:1">
+      Or call us directly at <a href="tel:016-2209361" style="color:rgba(255,255,255,0.7);font-weight:600">016-220 9361</a>.
+      Walk-ins always welcome.
+    </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer class="footer" role="contentinfo">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="Ipoh Tuck Kee" class="footer-logo-img">
+        </div>
+        <p class="footer-tagline">
+          Three generations. One kitchen. Sixty years of the most beloved Chinese noodles in Ipoh.
+        </p>
+      </div>
+
+      <nav class="footer-col" aria-label="Site">
+        <h4 class="footer-col-title">Navigate</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="story.html">Our Story</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reservation.html">Find Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Hours</h4>
+        <ul class="footer-hours-mini">
+          <li class="footer-hr-row"><span>Mon – Thu</span><span>11am – 10:45pm</span></li>
+          <li class="footer-hr-row"><span>Fri – Sat</span><span>11am – 11:30pm</span></li>
+          <li class="footer-hr-row"><span>Sunday</span><span>10am – 10:45pm</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Contact</h4>
+        <address class="footer-address">
+          61, Jalan Yau Tet Shin<br>
+          Taman Jubilee · 30300 Ipoh<br>
+          Perak, Malaysia
+        </address>
+        <a href="tel:016-2209361" class="footer-phone">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          016-220 9361
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Ipoh Tuck Kee Restaurant · 德記餐廳. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="js/main.js"></script>
+<script>
+(function(){
+  var orb   = document.querySelector('.orb-section');
+  var stage = orb && orb.querySelector('.orb-stage');
+  if(!orb || !stage) return;
+
+  var cards = Array.prototype.slice.call(orb.querySelectorAll('.orb-card'));
+
+  /* Pentagon base angles, clockwise from top (-90°) */
+  var TWO_PI = Math.PI * 2;
+  var baseAngles = [
+    -Math.PI / 2,
+    -Math.PI / 2 + TWO_PI / 5,
+    -Math.PI / 2 + (TWO_PI / 5) * 2,
+    -Math.PI / 2 + (TWO_PI / 5) * 3,
+    -Math.PI / 2 + (TWO_PI / 5) * 4
+  ];
+
+  /* One full clockwise rotation every 40 seconds */
+  var PERIOD_MS = 40000;
+  var orbitStart = null;
+  var paused = false;
+  var pausedAt = 0;
+  var orbitRunning = false;
+
+  function positionCards(angle) {
+    var sw = stage.offsetWidth  || 710;
+    var sh = stage.offsetHeight || 680;
+    /* 230px radius — matches original spoke endpoints */
+    var rx = 230, ry = 230;
+    cards.forEach(function(c, i) {
+      var a = baseAngles[i] + angle;
+      var leftPct = 50 + (Math.cos(a) * rx / sw * 100);
+      var topPct  = 50 + (Math.sin(a) * ry / sh * 100);
+      c.style.left = leftPct + '%';
+      c.style.top  = topPct  + '%';
+    });
+  }
+
+  function orbitFrame(ts) {
+    if (!orbitRunning) return;
+    if (paused) { requestAnimationFrame(orbitFrame); return; }
+    if (orbitStart === null) orbitStart = ts;
+    var elapsed = ts - orbitStart;
+    var angle = (elapsed % PERIOD_MS) / PERIOD_MS * TWO_PI; /* clockwise */
+    positionCards(angle);
+    requestAnimationFrame(orbitFrame);
+  }
+
+  /* Pause on hover so user can read a card */
+  cards.forEach(function(c) {
+    c.addEventListener('mouseenter', function(){ paused = true; });
+    c.addEventListener('mouseleave', function(){ paused = false; });
+  });
+
+  function launch() {
+    /* Fade cards in */
+    orb.classList.add('launched');
+    /* Set initial positions before starting loop */
+    positionCards(0);
+    /* Short delay so fade-in is visible before orbit begins */
+    setTimeout(function() {
+      orbitRunning = true;
+      requestAnimationFrame(orbitFrame);
+    }, 900);
+  }
+
+  var launched = false;
+  function safeOrbLaunch() {
+    if (launched) return;
+    launched = true;
+    launch();
+  }
+
+  function orbCheck() {
+    var r = orb.getBoundingClientRect();
+    if (r.top < window.innerHeight + 200) safeOrbLaunch();
+  }
+
+  orbCheck();
+  window.addEventListener('scroll', orbCheck, { passive: true });
+  setTimeout(safeOrbLaunch, 2000);
+})();
+</script>
+
+<script>
+/* ── ATMO SECTION SCROLL-REVEAL + NUMBER COUNTER ─────────── */
+(function(){
+  var atmo = document.querySelector('.atmo-section');
+  if(!atmo) return;
+
+  function countUp(el, target, duration){
+    var start = 0, step = target / (duration / 16);
+    var t = setInterval(function(){
+      start += step;
+      if(start >= target){ start = target; clearInterval(t); }
+      el.textContent = Math.round(start).toLocaleString();
+    }, 16);
+  }
+
+  function launch(){
+    /* Force transitions (bypass prefers-reduced-motion) */
+    var reveals = atmo.querySelectorAll('.atmo-reveal');
+    reveals.forEach(function(el){
+      el.style.transitionDuration = '0.7s, 0.7s';
+      el.style.transitionTimingFunction = 'ease, cubic-bezier(0.34,1.56,0.64,1)';
+    });
+
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){
+        atmo.classList.add('atmo-launched');
+
+        /* Count up stats after their delay */
+        var stat0 = atmo.querySelector('.atmo-stat-0 .atmo-stat-val[data-count]');
+        var stat1 = atmo.querySelector('.atmo-stat-1 .atmo-stat-val[data-count]');
+        if(stat0){
+          setTimeout(function(){
+            stat0.innerHTML = '<span class="count-num">0</span><em>+</em>';
+            countUp(stat0.querySelector('.count-num'), 60, 1200);
+          }, 400);
+        }
+        if(stat1){
+          setTimeout(function(){
+            stat1.innerHTML = '<span class="count-num">0</span>';
+            countUp(stat1.querySelector('.count-num'), 3095, 1400);
+          }, 560);
+        }
+      });
+    });
+  }
+
+  var launched = false;
+  function safeLaunch(){ if(!launched){ launched = true; launch(); } }
+
+  function checkInView(){
+    var r = atmo.getBoundingClientRect();
+    if(r.top < window.innerHeight && r.bottom > 0) safeLaunch();
+  }
+
+  /* Poll every frame until launched — catches all scroll methods */
+  function poll(){
+    if(launched) return;
+    checkInView();
+    requestAnimationFrame(poll);
+  }
+
+  window.addEventListener('scroll', checkInView, { passive: true });
+  window.addEventListener('load', checkInView);
+  requestAnimationFrame(poll);
+})();
+</script>
+
+<script>
+/* ── DISHES SECTION SCROLL REVEAL + 3D TILT ──────────────── */
+(function(){
+  var ds = document.querySelector('.dishes-section');
+  if(!ds) return;
+
+  /* Scroll reveal */
+  var dsLaunched = false;
+  function dsLaunch(){
+    if(dsLaunched) return; dsLaunched = true;
+    /* Force transitions past prefers-reduced-motion */
+    var reveals = ds.querySelectorAll('.sec-reveal, .d-card');
+    reveals.forEach(function(el){
+      el.style.setProperty('transition-duration','0.85s,0.75s','important');
+    });
+    ds.classList.add('ds-launched');
+  }
+  function dsCheck(){ var r=ds.getBoundingClientRect(); if(r.top<window.innerHeight+100) dsLaunch(); }
+  function dsPoll(){ if(dsLaunched)return; dsCheck(); requestAnimationFrame(dsPoll); }
+  window.addEventListener('scroll', dsCheck, {passive:true});
+  window.addEventListener('load', dsCheck);
+  setTimeout(dsLaunch, 2500);
+  requestAnimationFrame(dsPoll);
+
+  /* 3D magnetic tilt on mouse move */
+  var cards = ds.querySelectorAll('.d-card');
+  cards.forEach(function(card){
+    card.addEventListener('mousemove', function(e){
+      var r = card.getBoundingClientRect();
+      var x = (e.clientX - r.left) / r.width  - 0.5;  /* -0.5 to 0.5 */
+      var y = (e.clientY - r.top)  / r.height - 0.5;
+      var tiltX = (-y * 10).toFixed(2);
+      var tiltY = ( x * 10).toFixed(2);
+      card.style.setProperty('transform',
+        'translateY(-10px) scale(1.02) perspective(800px) rotateX('+tiltX+'deg) rotateY('+tiltY+'deg)',
+        'important');
+    });
+    card.addEventListener('mouseleave', function(){
+      card.style.removeProperty('transform');
+    });
+  });
+})();
+</script>
+
+<script>
+/* ── VISIT SPLIT REVEAL ───────────────────────────────────── */
+(function(){
+  var vs = document.querySelector('.visit-split');
+  if(!vs) return;
+  var vsLaunched = false;
+
+  function sp(el,p,v){ el.style.setProperty(p,v,'important'); }
+
+  function launch(){
+    if(vsLaunched) return;
+    vsLaunched = true;
+
+    /* Form panel fade-up (inline !important beats prefers-reduced-motion) */
+    var fp = vs.querySelector('.visit-form-panel');
+    if(fp){
+      sp(fp,'opacity','0');
+      sp(fp,'transform','translateY(30px)');
+      sp(fp,'transition','none');
+      setTimeout(function(){
+        sp(fp,'transition','opacity 0.8s ease, transform 0.9s cubic-bezier(0.22,1,0.36,1)');
+        setTimeout(function(){ sp(fp,'opacity','1'); sp(fp,'transform','none'); }, 16);
+      }, 150);
+    }
+
+    /* vf-reveal elements — staggered inline reveal, bypasses CSS transitions */
+    var vfDelays = {1:120,2:240,3:360,4:500,5:620,6:740};
+    vs.querySelectorAll('.vf-reveal').forEach(function(el){
+      sp(el,'opacity','0');
+      sp(el,'transform','translateX(40px)');
+      sp(el,'transition','none');
+      var n = (el.className.match(/vf-r(\d)/)||[])[1];
+      var d = n ? (vfDelays[+n] || 0) : 0;
+      setTimeout(function(){
+        sp(el,'transition','opacity 0.7s ease, transform 0.75s cubic-bezier(0.22,1,0.36,1)');
+        setTimeout(function(){ sp(el,'opacity','1'); sp(el,'transform','none'); }, 16);
+      }, d);
+    });
+
+    /* Lantern glow on title */
+    var title = vs.querySelector('.visit-title');
+    if(title){
+      sp(title,'animation-name','lanternGlow');
+      sp(title,'animation-duration','3.6s');
+      sp(title,'animation-delay','0.9s');
+      sp(title,'animation-timing-function','ease-in-out');
+      sp(title,'animation-iteration-count','infinite');
+    }
+
+    vs.classList.add('vs-launched','vf-launched');
+  }
+
+  function check(){ var r=vs.getBoundingClientRect(); if(r.top<window.innerHeight-60) launch(); }
+  function poll(){ if(vsLaunched)return; check(); requestAnimationFrame(poll); }
+  window.addEventListener('scroll',check,{passive:true});
+  window.addEventListener('load',check);
+  setTimeout(launch,3000);
+  requestAnimationFrame(poll);
+})();
+</script>
+
+<script>
+/* ── GOOGLE REVIEWS VERTICAL SCROLL (CSS animation — GPU, scroll-proof) ── */
+(function(){
+  var wrap = document.querySelector('.grev-cols-wrap');
+  if(!wrap) return;
+  function sp(el,p,v){ el.style.setProperty(p,v,'important'); }
+
+  var upCols   = wrap.querySelectorAll('.grev-col--up:not(.grev-col--slow) .grev-col-inner');
+  var downCols = wrap.querySelectorAll('.grev-col--down .grev-col-inner');
+  var slowCols = wrap.querySelectorAll('.grev-col--slow .grev-col-inner');
+
+  upCols.forEach(function(c){
+    sp(c,'animation','grevScrollUp 22s linear infinite');
+    sp(c,'will-change','transform');
+  });
+  downCols.forEach(function(c){
+    sp(c,'animation','grevScrollDown 26s linear infinite');
+    sp(c,'will-change','transform');
+  });
+  slowCols.forEach(function(c){
+    sp(c,'animation','grevScrollUp 32s linear infinite');
+    sp(c,'will-change','transform');
+  });
+})();
+</script>
+<script>
+(function(){
+  var form = document.getElementById('visitForm');
+  if (!form) return;
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var btn = form.querySelector('[type="submit"]');
+    var originalHTML = btn.innerHTML;
+    btn.textContent = 'Sending…'; btn.disabled = true;
+    try {
+      var data = new FormData();
+      data.set('name',  document.getElementById('vf-name')?.value  || '');
+      data.set('phone', document.getElementById('vf-phone')?.value || '');
+      data.set('date',  document.getElementById('vf-date')?.value  || '');
+      data.set('guests',document.getElementById('vf-pax')?.value   || '');
+      var res = await fetch('https://formspree.io/f/xvznnlbp', {
+        method: 'POST', body: data, headers: {'Accept':'application/json'}
+      });
+      if (res.ok) {
+        btn.textContent = '✓ Message Sent!';
+        btn.style.background = 'var(--jade, #2e7d4f)';
+        form.reset();
+      } else {
+        btn.innerHTML = originalHTML; btn.disabled = false;
+        alert('Something went wrong. Please call us at 016-220 9361.');
+      }
+    } catch(err) {
+      btn.innerHTML = originalHTML; btn.disabled = false;
+      alert('Could not send. Please call us at 016-220 9361.');
+    }
+  });
+})();
+</script>
+</body>
+</html>

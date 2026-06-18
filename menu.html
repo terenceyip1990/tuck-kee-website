@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1A1410">
+  <meta name="description" content="The full menu of Ipoh Tuck Kee Restaurant — noodles, seafood, rice, vegetables, soups and drinks. Handcrafted since 1960.">
+  <title>Menu | Ipoh Tuck Kee Restaurant · 德記餐廳</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css?v=44">
+</head>
+<body>
+
+<div class="status-bar" role="banner">
+  <div class="status-bar-left">
+    <span class="status-pulse" id="statusPulse"><span class="status-pulse-dot" aria-hidden="true"></span><span class="status-pulse-label">Open Now · Closes 10:45 PM</span></span>
+    <span class="status-divider" aria-hidden="true"></span>
+    <span class="status-addr"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>61, Jalan Yau Tet Shin · Ipoh</span>
+  </div>
+  <div class="status-bar-right">
+    <span class="status-since" aria-hidden="true">Est. 1960</span>
+    <span class="status-divider" aria-hidden="true"></span>
+    <a href="tel:016-2209361" class="status-phone"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>016-220 9361</a>
+  </div>
+</div>
+
+<nav class="nav" id="nav" role="navigation" aria-label="Main">
+  <div class="nav-inner wrap">
+    <a href="index.html" class="nav-logo" aria-label="Ipoh Tuck Kee — Home">
+      <img src="images/logo.png" alt="Ipoh Tuck Kee · 怡保德記" class="nav-logo-img">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"      class="nav-link">Home</a></li>
+      <li><a href="menu.html"        class="nav-link active">Menu</a></li>
+      <li><a href="story.html"       class="nav-link">Our Story</a></li>
+      <li><a href="reviews.html"     class="nav-link">Reviews</a></li>
+      <li><a href="gallery.html"     class="nav-link">Gallery</a></li>
+      <li><a href="reservation.html" class="nav-link">Find Us</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="btn btn-cinnabar btn-pill nav-cta" id="cartTrigger" aria-label="Open cart">
+        Cart <span class="cart-count-badge" id="cartCount">0</span>
+      </button>
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── PAGE HERO ──────────────────────────────────────────── -->
+<section class="page-hero" aria-label="Menu">
+  <div class="page-hero-bg-char" aria-hidden="true">食</div>
+  <div class="page-hero-inner wrap">
+    <span class="eyebrow">The Tuck Kee Menu · 菜單</span>
+    <h1 class="page-hero-title">Our <em>Menu</em></h1>
+    <p class="page-hero-sub">Handcrafted dishes from a kitchen that's been perfecting them since 1960.</p>
+  </div>
+</section>
+
+<!-- ── MENU LAYOUT ────────────────────────────────────────── -->
+<div class="menu-layout">
+  <aside class="menu-sidebar" aria-label="Menu categories">
+    <h2 class="menu-sidebar-title">Categories</h2>
+    <nav class="menu-cat-nav">
+      <button class="menu-cat-btn active" data-cat="noodles" aria-pressed="true"><span class="menu-cat-icon">🍜</span><span>Noodles</span><span class="menu-cat-zh">麵食</span></button>
+      <button class="menu-cat-btn" data-cat="seafood" aria-pressed="false"><span class="menu-cat-icon">🦑</span><span>Seafood</span><span class="menu-cat-zh">海鮮</span></button>
+      <button class="menu-cat-btn" data-cat="rice" aria-pressed="false"><span class="menu-cat-icon">🍚</span><span>Rice</span><span class="menu-cat-zh">飯食</span></button>
+      <button class="menu-cat-btn" data-cat="vegetables" aria-pressed="false"><span class="menu-cat-icon">🥬</span><span>Vegetables</span><span class="menu-cat-zh">蔬菜</span></button>
+      <button class="menu-cat-btn" data-cat="soup" aria-pressed="false"><span class="menu-cat-icon">🥣</span><span>Soups</span><span class="menu-cat-zh">湯品</span></button>
+      <button class="menu-cat-btn" data-cat="sides" aria-pressed="false"><span class="menu-cat-icon">🥟</span><span>Sides</span><span class="menu-cat-zh">小食</span></button>
+      <button class="menu-cat-btn" data-cat="drinks" aria-pressed="false"><span class="menu-cat-icon">🧊</span><span>Drinks</span><span class="menu-cat-zh">飲品</span></button>
+    </nav>
+    <div class="menu-sidebar-info">
+      <strong>A note on prices</strong>
+      Prices are estimates. Actual price may vary by season and availability. All dishes freshly prepared upon order.
+    </div>
+  </aside>
+
+  <main class="menu-main" id="menu-main">
+
+    <!-- NOODLES -->
+    <div class="menu-section active" id="cat-noodles">
+      <div class="menu-section-header">
+        <div class="menu-section-zh">麵食</div>
+        <h2 class="menu-section-title"><em>Noodles</em></h2>
+        <p class="menu-section-desc">Our legendary noodles, perfected over six decades — fish balls hand-rolled, broth simmered, hor fun laid out each morning.</p>
+      </div>
+      <div class="menu-grid">
+
+        <article class="menu-item">
+          <div class="menu-item-photo mi-yukong"><div class="menu-item-badge popular">Most Popular</div></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Yu Kong Hor</h3><span class="menu-item-price">RM 10</span></div>
+            <p class="menu-item-zh">魚丸河粉</p>
+            <p class="menu-item-desc">Silky flat rice noodles in a clear, savory broth with handmade fish balls and fresh Ipoh bean sprouts.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Fish</span><span class="diet-tag">Contains Gluten</span></div>
+            <button class="btn-add" data-id="yukong" data-name="Yu Kong Hor" data-price="10">+ Add to Order</button>
+          </div>
+        </article>
+
+        <article class="menu-item">
+          <div class="menu-item-photo mi-smooth-egg"><div class="menu-item-badge">House Special</div></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Smooth Egg Noodles</h3><span class="menu-item-price">RM 11</span></div>
+            <p class="menu-item-zh">滑蛋河</p>
+            <p class="menu-item-desc">Flat rice noodles enveloped in velvety golden egg gravy — comforting, rich, deeply satisfying.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Egg</span><span class="diet-tag">Contains Gluten</span></div>
+            <button class="btn-add" data-id="smooth-egg" data-name="Smooth Egg Noodles" data-price="11">+ Add to Order</button>
+          </div>
+        </article>
+
+        <article class="menu-item">
+          <div class="menu-item-photo mi-wonton"></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Wonton Noodle Soup</h3><span class="menu-item-price">RM 10</span></div>
+            <p class="menu-item-zh">雲吞麵</p>
+            <p class="menu-item-desc">Thin egg noodles with delicate pork-and-prawn wontons in a clear, aromatic broth.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Pork</span><span class="diet-tag">Shrimp</span></div>
+            <button class="btn-add" data-id="wonton" data-name="Wonton Noodle Soup" data-price="10">+ Add to Order</button>
+          </div>
+        </article>
+
+        <article class="menu-item">
+          <div class="menu-item-photo mi-char-kway"></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Char Kway Teow</h3><span class="menu-item-price">RM 12</span></div>
+            <p class="menu-item-zh">炒粿條</p>
+            <p class="menu-item-desc">Wok-charred flat rice noodles with egg, bean sprouts, Chinese sausage and king prawns.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Egg</span><span class="diet-tag">Shrimp</span></div>
+            <button class="btn-add" data-id="char-kway" data-name="Char Kway Teow" data-price="12">+ Add to Order</button>
+          </div>
+        </article>
+
+        <article class="menu-item">
+          <div class="menu-item-photo mi-lor-mee"></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Lor Mee</h3><span class="menu-item-price">RM 10</span></div>
+            <p class="menu-item-zh">滷麵</p>
+            <p class="menu-item-desc">Thick yellow noodles braised in rich dark gravy with pork slices and hard-boiled egg.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Pork</span><span class="diet-tag">Egg</span></div>
+            <button class="btn-add" data-id="lor-mee" data-name="Lor Mee" data-price="10">+ Add to Order</button>
+          </div>
+        </article>
+
+        <article class="menu-item">
+          <div class="menu-item-photo mi-pan-mee"></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Pan Mee</h3><span class="menu-item-price">RM 11</span></div>
+            <p class="menu-item-zh">板麵</p>
+            <p class="menu-item-desc">Hand-pulled wheat noodles in a clear anchovy broth with minced pork and crispy shallots.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Contains Gluten</span><span class="diet-tag">Pork</span></div>
+            <button class="btn-add" data-id="pan-mee" data-name="Pan Mee" data-price="11">+ Add to Order</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- SEAFOOD -->
+    <div class="menu-section" id="cat-seafood">
+      <div class="menu-section-header">
+        <div class="menu-section-zh">海鮮</div>
+        <h2 class="menu-section-title"><em>Seafood</em></h2>
+        <p class="menu-section-desc">Fresh catches from local markets, wok-fired to perfection over a roaring flame.</p>
+      </div>
+      <div class="menu-grid">
+
+        <article class="menu-item">
+          <div class="menu-item-photo mi-squid"><div class="menu-item-badge popular">Chef's Pick</div></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Wok-Fried Squid</h3><span class="menu-item-price">RM 22</span></div>
+            <p class="menu-item-zh">炒魷魚</p>
+            <p class="menu-item-desc">Tender squid wok-tossed over high flame with garlic, ginger and signature house sauce.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Squid</span><span class="diet-tag">Garlic</span></div>
+            <button class="btn-add" data-id="squid" data-name="Wok-Fried Squid" data-price="22">+ Add to Order</button>
+          </div>
+        </article>
+
+        <article class="menu-item">
+          <div class="menu-item-photo mi-octopus"><div class="menu-item-badge">Highly Reviewed</div></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Baby Octopus in Soy</h3><span class="menu-item-price">RM 26</span></div>
+            <p class="menu-item-zh">醬油八爪魚</p>
+            <p class="menu-item-desc">Light and soft baby octopus braised in fragrant soy-ginger glaze. Remarkably tender.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Octopus</span><span class="diet-tag">No Pork</span></div>
+            <button class="btn-add" data-id="octopus" data-name="Baby Octopus in Soy" data-price="26">+ Add to Order</button>
+          </div>
+        </article>
+
+        <article class="menu-item">
+          <div class="menu-item-photo mi-prawn"></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Butter Prawns</h3><span class="menu-item-price">RM 32</span></div>
+            <p class="menu-item-zh">奶油蝦</p>
+            <p class="menu-item-desc">Shell-on tiger prawns tossed with butter, curry leaves and dried chilli flakes.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Shrimp</span><span class="diet-tag">Dairy</span></div>
+            <button class="btn-add" data-id="butter-prawn" data-name="Butter Prawns" data-price="32">+ Add to Order</button>
+          </div>
+        </article>
+
+        <article class="menu-item">
+          <div class="menu-item-photo mi-steamed-fish"></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Steamed Sea Bass</h3><span class="menu-item-price">RM 38</span></div>
+            <p class="menu-item-zh">清蒸鱸魚</p>
+            <p class="menu-item-desc">Whole sea bass steamed Hong Kong-style with soy, sesame oil, ginger and spring onion.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Fish</span><span class="diet-tag">No Pork</span></div>
+            <button class="btn-add" data-id="sea-bass" data-name="Steamed Sea Bass" data-price="38">+ Add to Order</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- RICE -->
+    <div class="menu-section" id="cat-rice">
+      <div class="menu-section-header">
+        <div class="menu-section-zh">飯食</div>
+        <h2 class="menu-section-title"><em>Rice</em></h2>
+        <p class="menu-section-desc">Fragrant jasmine rice dishes for a hearty, satisfying meal.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <div class="menu-item-photo mi-fried-rice"><div class="menu-item-badge">Crowd Favourite</div></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">House Fried Rice</h3><span class="menu-item-price">RM 13</span></div>
+            <p class="menu-item-zh">德記炒飯</p>
+            <p class="menu-item-desc">Jasmine rice wok-fried over fierce heat with egg, spring onion and prawns. Smoky, fragrant.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Egg</span><span class="diet-tag">Shrimp</span></div>
+            <button class="btn-add" data-id="fried-rice" data-name="House Fried Rice" data-price="13">+ Add to Order</button>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-photo mi-claypot-rice"></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Claypot Chicken Rice</h3><span class="menu-item-price">RM 16</span></div>
+            <p class="menu-item-zh">砂鍋雞飯</p>
+            <p class="menu-item-desc">Slow-cooked claypot rice with marinated chicken, Chinese sausage and mushrooms. Crispy bottom.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Chicken</span><span class="diet-tag">Mushroom</span></div>
+            <button class="btn-add" data-id="claypot-rice" data-name="Claypot Chicken Rice" data-price="16">+ Add to Order</button>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-photo mi-steamed-rice"></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Steamed White Rice</h3><span class="menu-item-price">RM 2</span></div>
+            <p class="menu-item-zh">白飯</p>
+            <p class="menu-item-desc">Fragrant Thai jasmine rice, steamed to fluffy perfection.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Vegan</span><span class="diet-tag">Gluten-Free</span></div>
+            <button class="btn-add" data-id="steamed-rice" data-name="Steamed White Rice" data-price="2">+ Add to Order</button>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- VEGETABLES -->
+    <div class="menu-section" id="cat-vegetables">
+      <div class="menu-section-header">
+        <div class="menu-section-zh">蔬菜</div>
+        <h2 class="menu-section-title"><em>Vegetables</em></h2>
+        <p class="menu-section-desc">Fresh greens, wok-tossed with fragrant garlic and oyster sauce.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <div class="menu-item-photo mi-kangkung"></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Stir-Fried Kangkung</h3><span class="menu-item-price">RM 10</span></div>
+            <p class="menu-item-zh">炒空心菜</p>
+            <p class="menu-item-desc">Water spinach wok-blasted with garlic, dried shrimp paste and chilli.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Vegan Option</span><span class="diet-tag">Spicy</span></div>
+            <button class="btn-add" data-id="kangkung" data-name="Stir-Fried Kangkung" data-price="10">+ Add to Order</button>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-photo mi-tofu"></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Braised Tofu</h3><span class="menu-item-price">RM 12</span></div>
+            <p class="menu-item-zh">紅燒豆腐</p>
+            <p class="menu-item-desc">Silken tofu braised in savory oyster sauce with mushrooms and spring onion.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Vegetarian</span><span class="diet-tag">Mushroom</span></div>
+            <button class="btn-add" data-id="tofu" data-name="Braised Tofu" data-price="12">+ Add to Order</button>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-photo mi-beansprout"></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Ipoh Bean Sprouts</h3><span class="menu-item-price">RM 8</span></div>
+            <p class="menu-item-zh">怡保豆芽</p>
+            <p class="menu-item-desc">Famous Ipoh taugeh — fat, crunchy bean sprouts with soy, sesame and spring onion.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Vegan</span><span class="diet-tag">Gluten-Free</span></div>
+            <button class="btn-add" data-id="beansprout" data-name="Ipoh Bean Sprouts" data-price="8">+ Add to Order</button>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- SOUPS -->
+    <div class="menu-section" id="cat-soup">
+      <div class="menu-section-header">
+        <div class="menu-section-zh">湯品</div>
+        <h2 class="menu-section-title"><em>Soups</em></h2>
+        <p class="menu-section-desc">Clear broths and hearty soups, slow-simmered for depth of flavour.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <div class="menu-item-photo mi-fishball-soup"><div class="menu-item-badge popular">Classic</div></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Fishball Soup</h3><span class="menu-item-price">RM 8</span></div>
+            <p class="menu-item-zh">魚丸湯</p>
+            <p class="menu-item-desc">Handmade fish balls in clear, gently sweet Cantonese broth. Light and warming.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Fish</span><span class="diet-tag">No Pork</span></div>
+            <button class="btn-add" data-id="fishball-soup" data-name="Fishball Soup" data-price="8">+ Add to Order</button>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-photo mi-tom-yum"></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Tom Yum Seafood</h3><span class="menu-item-price">RM 18</span></div>
+            <p class="menu-item-zh">冬蔭海鮮湯</p>
+            <p class="menu-item-desc">Spicy and sour Thai-style broth loaded with prawns, squid and mushrooms.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Spicy</span><span class="diet-tag">Shrimp</span></div>
+            <button class="btn-add" data-id="tom-yum" data-name="Tom Yum Seafood" data-price="18">+ Add to Order</button>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- SIDES -->
+    <div class="menu-section" id="cat-sides">
+      <div class="menu-section-header">
+        <div class="menu-section-zh">小食</div>
+        <h2 class="menu-section-title"><em>Sides &amp; Snacks</em></h2>
+        <p class="menu-section-desc">Perfect for sharing — crispy, golden, utterly addictive.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <div class="menu-item-photo mi-chicken-wings"><div class="menu-item-badge popular">Highly Reviewed</div></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Fried Chicken Wings</h3><span class="menu-item-price">RM 14</span></div>
+            <p class="menu-item-zh">炸雞翅</p>
+            <p class="menu-item-desc">Marinated overnight, fried to golden perfection. Crispy skin, juicy meat. Served with sambal dip.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Chicken</span><span class="diet-tag">Chilli Available</span></div>
+            <button class="btn-add" data-id="chicken-wings" data-name="Fried Chicken Wings" data-price="14">+ Add to Order</button>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-photo mi-spring-rolls"></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Spring Rolls</h3><span class="menu-item-price">RM 8</span></div>
+            <p class="menu-item-zh">春卷</p>
+            <p class="menu-item-desc">Crispy fried spring rolls with julienned vegetables and glass noodles. Sweet chilli dip.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Vegetarian</span><span class="diet-tag">Contains Gluten</span></div>
+            <button class="btn-add" data-id="spring-rolls" data-name="Spring Rolls" data-price="8">+ Add to Order</button>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-photo mi-yong-tau-foo"></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Yong Tau Foo</h3><span class="menu-item-price">RM 12</span></div>
+            <p class="menu-item-zh">釀豆腐</p>
+            <p class="menu-item-desc">Fish paste stuffed into tofu, eggplant and bitter gourd, simmered in light broth.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Fish</span><span class="diet-tag">No Pork</span></div>
+            <button class="btn-add" data-id="ytf" data-name="Yong Tau Foo" data-price="12">+ Add to Order</button>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- DRINKS -->
+    <div class="menu-section" id="cat-drinks">
+      <div class="menu-section-header">
+        <div class="menu-section-zh">飲品</div>
+        <h2 class="menu-section-title"><em>Drinks</em></h2>
+        <p class="menu-section-desc">Refreshing beverages to complement your meal.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <div class="menu-item-photo mi-teh-tarik"><div class="menu-item-badge">Classic</div></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Teh Tarik</h3><span class="menu-item-price">RM 3.50</span></div>
+            <p class="menu-item-zh">拉茶</p>
+            <p class="menu-item-desc">Frothy pulled milk tea — rich, creamy, perfectly sweet. A Malaysian staple.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Dairy</span><span class="diet-tag">Caffeine</span></div>
+            <button class="btn-add" data-id="teh-tarik" data-name="Teh Tarik" data-price="3.50">+ Add to Order</button>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-photo mi-soy-milk"></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Fresh Soy Milk</h3><span class="menu-item-price">RM 3</span></div>
+            <p class="menu-item-zh">新鮮豆漿</p>
+            <p class="menu-item-desc">Freshly made soy milk served warm or cold. Naturally sweet and nourishing.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Vegan</span><span class="diet-tag">Gluten-Free</span></div>
+            <button class="btn-add" data-id="soy-milk" data-name="Fresh Soy Milk" data-price="3">+ Add to Order</button>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-photo mi-barley"></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Barley Water</h3><span class="menu-item-price">RM 3</span></div>
+            <p class="menu-item-zh">薏仁水</p>
+            <p class="menu-item-desc">Traditional cooling drink from pearl barley. Mildly sweet, refreshing on hot Ipoh days.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Vegan</span><span class="diet-tag">Cold</span></div>
+            <button class="btn-add" data-id="barley" data-name="Barley Water" data-price="3">+ Add to Order</button>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-photo mi-bandung"></div>
+          <div class="menu-item-body">
+            <div class="menu-item-header"><h3 class="menu-item-name">Air Bandung</h3><span class="menu-item-price">RM 3.50</span></div>
+            <p class="menu-item-zh">玫瑰糖水</p>
+            <p class="menu-item-desc">Rose syrup blended with evaporated milk. Sweet, pink, wonderfully nostalgic.</p>
+            <div class="menu-item-tags"><span class="diet-tag">Dairy</span><span class="diet-tag">Rose</span></div>
+            <button class="btn-add" data-id="bandung" data-name="Air Bandung" data-price="3.50">+ Add to Order</button>
+          </div>
+        </article>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- ── CART PANEL ─────────────────────────────────────────── -->
+<aside class="cart-panel" id="cartPanel" role="dialog" aria-labelledby="cart-title" aria-modal="true">
+  <div class="cart-panel-inner">
+    <div class="cart-header">
+      <h2 class="cart-title" id="cart-title">Your Order</h2>
+      <button class="cart-close" id="cartCloseBtn" aria-label="Close cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <p>Your bowl is empty</p>
+        <p style="font-size:0.82rem;color:var(--ink-3);margin-top:6px">Add a dish from the menu</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Estimated Total</span>
+        <span class="cart-total" id="cartTotal">RM 0.00</span>
+      </div>
+      <button class="btn btn-cinnabar btn-pill btn-block" onclick="alert('Ordering system coming soon. Please call 016-220 9361 to place your order.')">Place Order by Phone</button>
+      <p class="cart-note">Call <a href="tel:016-2209361">016-220 9361</a> to confirm or modify your order.</p>
+    </div>
+  </div>
+</aside>
+<div class="cart-overlay" onclick="document.getElementById('cartPanel').classList.remove('open')"></div>
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer class="footer" role="contentinfo">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="Ipoh Tuck Kee" class="footer-logo-img">
+        </div>
+        <p class="footer-tagline">Three generations. One kitchen. Sixty years of the most beloved Chinese noodles in Ipoh.</p>
+      </div>
+      <nav class="footer-col">
+        <h4 class="footer-col-title">Navigate</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="story.html">Our Story</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reservation.html">Find Us</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Hours</h4>
+        <ul class="footer-hours-mini">
+          <li class="footer-hr-row"><span>Mon – Thu</span><span>11am – 10:45pm</span></li>
+          <li class="footer-hr-row"><span>Fri – Sat</span><span>11am – 11:30pm</span></li>
+          <li class="footer-hr-row"><span>Sunday</span><span>10am – 10:45pm</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Contact</h4>
+        <address class="footer-address">61, Jalan Yau Tet Shin<br>Taman Jubilee · 30300 Ipoh<br>Perak, Malaysia</address>
+        <a href="tel:016-2209361" class="footer-phone">016-220 9361</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Ipoh Tuck Kee Restaurant · 德記餐廳. All rights reserved.</p>
+      <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
