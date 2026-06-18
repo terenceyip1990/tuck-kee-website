@@ -1952,6 +1952,12 @@ details[open] .faq-summary::after{transform:rotate(45deg)}
 .hero-portfolio-credit strong{color:var(--gold);font-weight:700;font-size:0.9rem}
 .footer-dev-credit{text-align:center;margin-top:14px;font-size:0.78rem;color:var(--ink-soft);letter-spacing:0.1em;text-transform:uppercase}
 .footer-dev-credit strong{color:var(--gold);font-weight:700}
+.map-nav-btns{display:flex;gap:0;border-top:1px solid var(--line)}
+.map-nav-btn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:13px 10px;font-size:0.82rem;font-weight:600;letter-spacing:0.04em;text-decoration:none;transition:background 0.18s}
+.map-nav-gmaps{background:#fff;color:#333;border-right:1px solid var(--line)}
+.map-nav-gmaps:hover{background:#f5f5f5;color:#111}
+.map-nav-waze{background:#33CCFF;color:#1a1a2e}
+.map-nav-waze:hover{background:#00BBEE;color:#1a1a2e}
 
 /* ── ATMO SECTION ──────────────────────────────────────────── */
 .atmo-section{background:var(--night);color:var(--paper);padding:clamp(72px,10vw,140px) var(--col-pad);position:relative;overflow:hidden}
