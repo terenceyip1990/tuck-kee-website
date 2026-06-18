@@ -881,8 +881,8 @@ a.contact-val:hover{color:var(--gold-light)}
 
 /* ── FOOTER ──────────────────────────────────────────────── */
 .footer{
-  background:var(--night);color:var(--paper);
-  border-top:1px solid rgba(182,138,56,0.18);
+  background:var(--paper);color:var(--ink);
+  border-top:1px solid var(--line-strong);
   padding-top:80px;
   position:relative;overflow:hidden;
 }
@@ -902,11 +902,11 @@ a.contact-val:hover{color:var(--gold-light)}
 .footer-logo-img{height:64px;width:auto;object-fit:contain;display:block}
 .footer-logo .logo-seal{box-shadow:0 4px 16px rgba(180,50,31,0.4)}
 .footer-logo-text{display:flex;flex-direction:column;gap:3px}
-.footer-logo-en{font-family:var(--f-display);font-size:1.15rem;font-weight:600;color:var(--paper)}
+.footer-logo-en{font-family:var(--f-display);font-size:1.15rem;font-weight:600;color:var(--ink)}
 .footer-logo-sub{font-size:0.66rem;color:var(--gold);letter-spacing:0.18em;text-transform:uppercase}
 .footer-tagline{
   font-family:var(--f-display);font-style:italic;
-  font-size:0.95rem;color:rgba(245,239,227,0.5);
+  font-size:0.95rem;color:var(--ink-3);
   line-height:1.7;max-width:340px;
 }
 
@@ -916,11 +916,11 @@ a.contact-val:hover{color:var(--gold-light)}
 }
 .footer-links{display:flex;flex-direction:column;gap:11px}
 .footer-links a{
-  font-size:0.86rem;color:rgba(245,239,227,0.55);
+  font-size:0.86rem;color:var(--ink-3);
   transition:color var(--t-fast);
   display:inline-flex;align-items:center;gap:8px;
 }
-.footer-links a:hover{color:var(--paper)}
+.footer-links a:hover{color:var(--ink)}
 .footer-links a::before{
   content:'';width:0;height:1px;background:var(--gold);
   transition:width var(--t-fast);
@@ -930,14 +930,14 @@ a.contact-val:hover{color:var(--gold-light)}
 .footer-hours-mini{display:flex;flex-direction:column;gap:9px}
 .footer-hr-row{
   display:flex;justify-content:space-between;gap:14px;
-  font-size:0.8rem;color:rgba(245,239,227,0.5);
-  padding-bottom:9px;border-bottom:1px solid rgba(245,239,227,0.06);
+  font-size:0.8rem;color:var(--ink-3);
+  padding-bottom:9px;border-bottom:1px solid var(--line);
 }
 .footer-hr-row:last-child{border-bottom:none}
 
 .footer-address{
   font-family:var(--f-display);font-style:italic;
-  font-size:0.92rem;color:rgba(245,239,227,0.55);
+  font-size:0.92rem;color:var(--ink-3);
   line-height:1.85;margin-bottom:18px;
 }
 .footer-phone{
@@ -948,16 +948,16 @@ a.contact-val:hover{color:var(--gold-light)}
 .footer-phone:hover{color:var(--gold-light)}
 
 .footer-bottom{
-  border-top:1px solid rgba(245,239,227,0.06);
+  border-top:1px solid var(--line);
   padding:22px 0;
   display:flex;align-items:center;justify-content:space-between;
   flex-wrap:wrap;gap:12px;
-  font-size:0.76rem;color:rgba(245,239,227,0.32);
+  font-size:0.76rem;color:var(--ink-soft);
   position:relative;z-index:1;
 }
 .footer-bottom-links{display:flex;gap:20px}
 .footer-bottom-links a{transition:color var(--t-fast)}
-.footer-bottom-links a:hover{color:rgba(245,239,227,0.65)}
+.footer-bottom-links a:hover{color:var(--ink)}
 
 /* ── PAGE HERO (inner pages) ──────────────────────────────── */
 .page-hero{
