@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css?v=48">
+  <link rel="stylesheet" href="css/main.css?v=49">
 </head>
 <body>
 
@@ -451,6 +451,11 @@
       </div>
 
     </div><!-- /orb-ring-group -->
+
+    <!-- Mobile swipe hint dots -->
+    <div class="orb-mobile-hint" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
 
     <!-- Center hub — fixed, outside the rotating group -->
     <div class="orb-hub" aria-hidden="true">
@@ -984,6 +989,12 @@
   if(!orb || !stage) return;
 
   var cards = Array.prototype.slice.call(orb.querySelectorAll('.orb-card'));
+
+  /* On mobile: show as static swipe slider, skip orbital animation */
+  if (window.innerWidth <= 768) {
+    orb.classList.add('launched');
+    return;
+  }
 
   /* Pentagon base angles, clockwise from top (-90°) */
   var TWO_PI = Math.PI * 2;

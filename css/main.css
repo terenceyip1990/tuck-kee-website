@@ -1773,13 +1773,29 @@ details[open] .faq-summary::after{transform:rotate(45deg)}
   .atmo-inner{grid-template-columns:1fr;gap:28px}
   .atmo-stats{grid-template-columns:1fr 1fr}
   .atmo-section{padding-block:clamp(40px,6vw,60px)}
-  /* Orb */
+  /* Orb → horizontal swipe slider on mobile */
   .orb-section{padding-block:clamp(40px,6vw,60px)}
-  .orb-stage{height:380px;max-width:100%}
-  .orb-hub{width:76px;height:76px}
-  .orb-card{width:110px}
-  .orb-card-panel{height:60px}
-  .orb-card-body{padding:8px 8px 10px}
+  .orb-stage{height:auto;overflow:visible;max-width:100%}
+  .orb-hub,.orb-spokes,.orb-ring,.orb-ring-b{display:none}
+  .orb-ring-group{
+    position:static;inset:auto;
+    display:flex;flex-direction:row;gap:14px;
+    overflow-x:auto;scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    padding:8px 20px 20px;
+    scrollbar-width:none;
+  }
+  .orb-ring-group::-webkit-scrollbar{display:none}
+  .orb-card{
+    position:static!important;transform:none!important;
+    opacity:1!important;left:auto!important;top:auto!important;
+    width:180px;flex-shrink:0;scroll-snap-align:center;
+  }
+  .orb-card-panel{height:88px}
+  .orb-card-body{padding:12px 12px 14px}
+  /* Scroll hint dots */
+  .orb-mobile-hint{display:flex;justify-content:center;gap:6px;margin-top:16px}
+  .orb-mobile-hint span{width:6px;height:6px;border-radius:50%;background:rgba(182,138,56,0.35)}
   /* Reviews ticker (home page) */
   .grev-section{padding-block:clamp(40px,6vw,60px)}
   .grev-cols-wrap{grid-template-columns:1fr;height:auto;max-height:420px}
