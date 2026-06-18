@@ -222,6 +222,10 @@ strong{font-weight:600;color:var(--ink)}
   border:1px solid var(--gold-line);
 }
 .btn-ghost-gold:hover{background:var(--gold-pale)}
+.btn-waze{background:#33CCFF;color:#1a1a2e;border:none;font-weight:600;display:inline-flex;align-items:center;gap:7px}
+.btn-waze:hover{background:#00BBEE;color:#1a1a2e}
+.visit-nav-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.visit-nav-btns .btn{display:inline-flex;align-items:center;gap:7px}
 
 .btn-ghost-cinnabar{
   background:transparent;color:var(--cinnabar);
