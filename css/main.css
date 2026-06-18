@@ -1775,24 +1775,25 @@ details[open] .faq-summary::after{transform:rotate(45deg)}
   .atmo-section{padding-block:clamp(40px,6vw,60px)}
   /* Orb → horizontal swipe slider on mobile */
   .orb-section{padding-block:clamp(40px,6vw,60px)}
-  .orb-stage{height:auto;overflow:visible;max-width:100%}
-  .orb-hub,.orb-spokes,.orb-ring,.orb-ring-b{display:none}
+  .orb-stage{height:auto!important;overflow:visible!important;max-width:100%!important}
+  .orb-hub,.orb-spokes,.orb-ring,.orb-ring-b{display:none!important}
   .orb-ring-group{
-    position:static;inset:auto;
-    display:flex;flex-direction:row;gap:14px;
-    overflow-x:auto;scroll-snap-type:x mandatory;
+    position:static!important;inset:auto!important;
+    display:flex!important;flex-direction:row!important;gap:14px!important;
+    overflow-x:auto!important;scroll-snap-type:x mandatory!important;
     -webkit-overflow-scrolling:touch;
-    padding:8px 20px 20px;
-    scrollbar-width:none;
+    padding:8px 20px 20px!important;
+    scrollbar-width:none!important;
+    height:auto!important;width:100%!important;
   }
   .orb-ring-group::-webkit-scrollbar{display:none}
   .orb-card{
     position:static!important;transform:none!important;
     opacity:1!important;left:auto!important;top:auto!important;
-    width:200px;flex-shrink:0;scroll-snap-align:center;height:auto;
+    width:200px!important;flex-shrink:0;scroll-snap-align:center;height:auto!important;
   }
-  .orb-card-panel{height:100px}
-  .orb-card-body{padding:12px 12px 16px}
+  .orb-card-panel{height:100px!important}
+  .orb-card-body{padding:12px 12px 16px!important}
   /* Nav arrows + dots */
   .orb-mobile-nav{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:14px}
   .orb-mobile-hint{display:flex;align-items:center;gap:6px}
