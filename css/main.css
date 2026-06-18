@@ -1789,13 +1789,16 @@ details[open] .faq-summary::after{transform:rotate(45deg)}
   .orb-card{
     position:static!important;transform:none!important;
     opacity:1!important;left:auto!important;top:auto!important;
-    width:180px;flex-shrink:0;scroll-snap-align:center;
+    width:200px;flex-shrink:0;scroll-snap-align:center;height:auto;
   }
-  .orb-card-panel{height:88px}
-  .orb-card-body{padding:12px 12px 14px}
-  /* Scroll hint dots */
-  .orb-mobile-hint{display:flex;justify-content:center;gap:6px;margin-top:16px}
-  .orb-mobile-hint span{width:6px;height:6px;border-radius:50%;background:rgba(182,138,56,0.35)}
+  .orb-card-panel{height:100px}
+  .orb-card-body{padding:12px 12px 16px}
+  /* Nav arrows + dots */
+  .orb-mobile-nav{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:14px}
+  .orb-mobile-hint{display:flex;align-items:center;gap:6px}
+  .orb-mobile-hint span{width:6px;height:6px;border-radius:50%;background:rgba(182,138,56,0.35);transition:background 0.2s}
+  .orb-mobile-hint span.active{background:rgba(182,138,56,1)}
+  .orb-nav-btn{background:rgba(182,138,56,0.15);border:1px solid rgba(182,138,56,0.4);color:#B68A38;border-radius:50%;width:34px;height:34px;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}
   /* Reviews ticker (home page) */
   .grev-section{padding-block:clamp(40px,6vw,60px)}
   .grev-cols-wrap{grid-template-columns:1fr;height:auto;max-height:420px}
