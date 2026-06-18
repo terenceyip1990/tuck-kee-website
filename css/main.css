@@ -1743,10 +1743,36 @@ details[open] .faq-summary::after{transform:rotate(45deg)}
   .nav-links.mobile-open .nav-link{padding:14px 16px;font-size:1rem;border-radius:8px}
   .nav-link.active::after{display:none}
   .nav-burger{display:flex}
+  /* Hero */
+  .hero-fw{height:100svh;min-height:500px}
+  .hero-fw-title{font-size:clamp(2rem,8vw,3rem);margin-bottom:12px}
+  .hero-fw-copy{padding:0 16px;max-height:calc(100% - 40px)}
+  .hero-fw-actions{gap:10px}
+  .hero-fw-actions .btn{padding:12px 20px;font-size:0.85rem}
+  .hero-fw-trust{font-size:0.72rem;gap:8px}
+  .hero-logo-img{height:clamp(40px,8vw,60px)}
+  .hero-divider{margin-bottom:12px}
+  .hero-scroll-hint{display:none}
+  /* Dishes */
   .hero-title{font-size:clamp(2.6rem,9vw,3.6rem)}
   .dishes-grid{grid-template-columns:1fr}
+  /* Atmo section */
+  .atmo-inner{grid-template-columns:1fr;gap:32px}
+  .atmo-stats{grid-template-columns:1fr 1fr}
+  /* Orb section */
+  .orb-stage{height:420px;max-width:100%}
+  .orb-hub{width:80px;height:80px}
+  .orb-card{width:120px}
+  .orb-card-panel{height:64px}
+  /* Visit section */
+  .visit-dark{min-height:auto;flex-direction:column}
+  .visit-dark-wrap{grid-template-columns:1fr;max-width:100%}
+  .visit-map-embed iframe{min-height:260px}
+  .visit-dark-info{padding:40px 20px}
+  /* Footer */
   .footer-top{grid-template-columns:1fr;gap:32px}
   .cart-panel{width:100%}
+  /* Gallery */
   .gal-masonry{columns:1}
   .form-row{grid-template-columns:1fr}
   .quote-section::before,.quote-section::after{display:none}
@@ -1754,13 +1780,23 @@ details[open] .faq-summary::after{transform:rotate(45deg)}
   .heritage-card:nth-child(1){grid-row:auto;min-height:280px}
   .metrics-strip{grid-template-columns:repeat(2,1fr)}
   .visit-dark::before,.visit-light::before{font-size:200px}
+  /* Reviews page */
+  .grev-cols-wrap{gap:12px}
 }
 @media(max-width:480px){
+  .hero-fw-title{font-size:clamp(1.8rem,7vw,2.4rem)}
+  .hero-fw-actions{flex-direction:column;width:100%;padding:0 8px}
+  .hero-fw-actions .btn{width:100%;justify-content:center}
   .hero-actions{flex-direction:column;width:100%}
   .hero-actions .btn{width:100%;justify-content:center}
   .hero-trust{gap:18px}
   .hero-trust-div{display:none}
   .res-form-col,.res-info-col{gap:16px}
+  .orb-stage{height:340px}
+  .orb-card{width:100px;font-size:0.78rem}
+  .ptk-item{padding:4px 14px;font-size:0.8rem}
+  .strip-inner{gap:0}
+  .dishes-section .eyebrow{font-size:0.65rem}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;animation-iteration-count:1!important}
