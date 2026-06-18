@@ -1943,6 +1943,9 @@ details[open] .faq-summary::after{transform:rotate(45deg)}
 .hero-revealed .hero-ri-divider{transition-delay:0.46s}
 .hero-revealed .hero-ri-actions{transition-delay:0.58s}
 .hero-revealed .hero-ri-trust{transition-delay:0.7s}
+.hero-revealed .hero-ri-credit{transition-delay:0.82s}
+.hero-portfolio-credit{font-size:0.72rem;color:rgba(245,239,227,0.45);letter-spacing:0.08em;margin-top:4px;text-align:center}
+.hero-portfolio-credit strong{color:rgba(245,239,227,0.7);font-weight:600}
 
 /* ── ATMO SECTION ──────────────────────────────────────────── */
 .atmo-section{background:var(--night);color:var(--paper);padding:clamp(72px,10vw,140px) var(--col-pad);position:relative;overflow:hidden}
