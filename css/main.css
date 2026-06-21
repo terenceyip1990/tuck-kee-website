@@ -690,9 +690,9 @@ strong{font-weight:600;color:var(--ink)}
   color:rgba(245,239,227,0.85);font-size:1.1rem;
   text-shadow:0 1px 4px rgba(0,0,0,0.4);
 }
-.d-img-1{background:url('../images/dish-yu-kong-hor.jpg') center/cover no-repeat}
-.d-img-2{background:url('../images/dish-wok-squid.jpg') center/cover no-repeat}
-.d-img-3{background:url('../images/dish-egg-noodle.jpg') center/cover no-repeat}
+.d-img-1{background:url('../images/dish-yu-kong-hor.webp') center/cover no-repeat}
+.d-img-2{background:url('../images/dish-wok-squid.webp') center/cover no-repeat}
+.d-img-3{background:url('../images/dish-egg-noodle.webp') center/cover no-repeat}
 
 .d-card-body{padding:26px 26px 28px}
 .d-card-name{
@@ -1380,22 +1380,22 @@ a.contact-val:hover{color:var(--gold-light)}
 .gal-sub{color:rgba(245,239,227,0.65);font-size:0.74rem}
 
 /* Gallery images — Ipoh Tuck Kee photos */
-.gi-yukong-1   {background:url('../images/dish-yu-kong-hor.jpg') center/cover no-repeat}
-.gi-ext-night  {background:url('../images/story-heritage.jpeg') center/cover no-repeat}
-.gi-wings      {background:url('../images/story-1985.jpeg') center/cover no-repeat}
-.gi-octopus    {background:url('../images/lohmee.jpeg') center/cover no-repeat}
-.gi-wok        {background:url('../images/story-1960.jpeg') center/cover no-repeat}
-.gi-smooth-egg {background:url('../images/dish-egg-noodle.jpg') center/cover no-repeat}
-.gi-squid      {background:url('../images/dish-wok-squid.jpg') center/cover no-repeat}
-.gi-street     {background:url('../images/story-2010.jpeg') center/cover no-repeat}
-.gi-wonton     {background:url('../images/wantonnoodlesoup.jpeg') center/cover no-repeat}
-.gi-ytf        {background:url('../images/panmee.jpeg') center/cover no-repeat}
-.gi-fishballs  {background:url('../images/story-today.jpeg') center/cover no-repeat}
-.gi-prawn      {background:url('../images/dish-wok-squid.jpg') center 30%/cover no-repeat}
-.gi-evening    {background:url('../images/story-heritage.jpeg') center 60%/cover no-repeat}
-.gi-char-kway  {background:url('../images/charkueyteow.jpeg') center/cover no-repeat}
-.gi-family     {background:url('../images/story-2010.jpeg') center top/cover no-repeat}
-.gi-beansprout {background:url('../images/dish-egg-noodle.jpg') center/cover no-repeat}
+.gi-yukong-1   {background:url('../images/dish-yu-kong-hor.webp') center/cover no-repeat}
+.gi-ext-night  {background:url('../images/story-heritage.webp') center/cover no-repeat}
+.gi-wings      {background:url('../images/story-1985.webp') center/cover no-repeat}
+.gi-octopus    {background:url('../images/lohmee.webp') center/cover no-repeat}
+.gi-wok        {background:url('../images/story-1960.webp') center/cover no-repeat}
+.gi-smooth-egg {background:url('../images/dish-egg-noodle.webp') center/cover no-repeat}
+.gi-squid      {background:url('../images/dish-wok-squid.webp') center/cover no-repeat}
+.gi-street     {background:url('../images/story-2010.webp') center/cover no-repeat}
+.gi-wonton     {background:url('../images/wantonnoodlesoup.webp') center/cover no-repeat}
+.gi-ytf        {background:url('../images/panmee.webp') center/cover no-repeat}
+.gi-fishballs  {background:url('../images/story-today.webp') center/cover no-repeat}
+.gi-prawn      {background:url('../images/dish-wok-squid.webp') center 30%/cover no-repeat}
+.gi-evening    {background:url('../images/story-heritage.webp') center 60%/cover no-repeat}
+.gi-char-kway  {background:url('../images/charkueyteow.webp') center/cover no-repeat}
+.gi-family     {background:url('../images/story-2010.webp') center top/cover no-repeat}
+.gi-beansprout {background:url('../images/dish-egg-noodle.webp') center/cover no-repeat}
 
 /* Lightbox */
 .lightbox{
@@ -1428,13 +1428,13 @@ a.contact-val:hover{color:var(--gold-light)}
 }
 
 /* Menu item photo gradients */
-.mi-yukong       {background:url('../images/dish-yu-kong-hor.jpg') center/cover no-repeat}
-.mi-smooth-egg   {background:url('../images/dish-egg-noodle.jpg') center/cover no-repeat}
-.mi-wonton       {background:url('../images/wantonnoodlesoup.jpeg') center/cover no-repeat}
-.mi-char-kway    {background:url('../images/charkueyteow.jpeg') center/cover no-repeat}
-.mi-lor-mee      {background:url('../images/lohmee.jpeg') center/cover no-repeat}
-.mi-pan-mee      {background:url('../images/panmee.jpeg') center/cover no-repeat}
-.mi-squid        {background:url('../images/dish-wok-squid.jpg') center/cover no-repeat}
+.mi-yukong       {background:url('../images/dish-yu-kong-hor.webp') center/cover no-repeat}
+.mi-smooth-egg   {background:url('../images/dish-egg-noodle.webp') center/cover no-repeat}
+.mi-wonton       {background:url('../images/wantonnoodlesoup.webp') center/cover no-repeat}
+.mi-char-kway    {background:url('../images/charkueyteow.webp') center/cover no-repeat}
+.mi-lor-mee      {background:url('../images/lohmee.webp') center/cover no-repeat}
+.mi-pan-mee      {background:url('../images/panmee.webp') center/cover no-repeat}
+.mi-squid        {background:url('../images/dish-wok-squid.webp') center/cover no-repeat}
 .mi-octopus      {background:linear-gradient(150deg,#0A1520,#1A2850,#2850A0,#0A1838)}
 .mi-prawn        {background:linear-gradient(150deg,#4A2808,#A06020,#D09838,#6A3A08)}
 .mi-steamed-fish {background:linear-gradient(150deg,#0A1A2A,#1A4060,#2A7090,#0A2540)}
@@ -1604,7 +1604,7 @@ details[open] .faq-summary::after{transform:rotate(45deg)}
 .story-body + .story-body{margin-top:16px}
 .story-img{
   aspect-ratio:4/5;border-radius:var(--r-lg);overflow:hidden;
-  background:url('../images/story-heritage.jpeg') center/cover no-repeat;
+  background:url('../images/story-heritage.webp') center/cover no-repeat;
   position:relative;box-shadow:var(--sh-lg);
 }
 .story-img-label{
@@ -1638,10 +1638,10 @@ details[open] .faq-summary::after{transform:rotate(45deg)}
   aspect-ratio:4/3;border-radius:var(--r-lg);overflow:hidden;
   box-shadow:var(--sh-lg);position:relative;
 }
-.story-img-1965{background:url('../images/story-1960.jpeg') center/cover no-repeat}
-.story-img-1985{background:url('../images/story-1985.jpeg') center/cover no-repeat}
-.story-img-2005{background:url('../images/story-2010.jpeg') center/cover no-repeat}
-.story-img-2025{background:url('../images/story-today.jpeg') center/cover no-repeat}
+.story-img-1965{background:url('../images/story-1960.webp') center/cover no-repeat}
+.story-img-1985{background:url('../images/story-1985.webp') center/cover no-repeat}
+.story-img-2005{background:url('../images/story-2010.webp') center/cover no-repeat}
+.story-img-2025{background:url('../images/story-today.webp') center/cover no-repeat}
 
 /* Story pillars */
 .story-pillars{background:var(--night);color:var(--paper);padding-block:clamp(72px,10vw,140px);position:relative;overflow:hidden}
