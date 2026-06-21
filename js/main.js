@@ -320,7 +320,6 @@
   const errEl      = document.getElementById('cartFormError');
   const nameEl     = document.getElementById('custName');
   const phoneEl    = document.getElementById('custPhone');
-  const emailEl    = document.getElementById('custEmail');
   const addressEl  = document.getElementById('custAddress');
 
   if (placeBtn) {
@@ -332,17 +331,16 @@
       }
       const name    = nameEl    ? nameEl.value.trim()    : '';
       const phone   = phoneEl   ? phoneEl.value.trim()   : '';
-      const email   = emailEl   ? emailEl.value.trim()   : '';
       const address = addressEl ? addressEl.value.trim() : '';
-      if (!name || !phone || !email || !address) {
+      if (!name || !phone || !address) {
         if (errEl) { errEl.textContent = 'Please fill in all fields before placing your order.'; errEl.style.display = 'block'; }
         return;
       }
       if (errEl) errEl.style.display = 'none';
       const total = items.reduce((s,i) => s + i.price * i.qty, 0);
       const orderLines = items.map(i => `• ${i.name} x${i.qty} — RM ${(i.price*i.qty).toFixed(2)}`).join('%0A');
-      const msg = `Hello Tuck Kee! I'd like to place an order 🙏%0A%0A${orderLines}%0A%0AEstimated Total%3A RM ${total.toFixed(2)}%0A%0AName%3A ${encodeURIComponent(name)}%0APhone%3A ${encodeURIComponent(phone)}%0AEmail%3A ${encodeURIComponent(email)}%0AAddress%3A ${encodeURIComponent(address)}%0A%0APlease confirm my order. Thank you!`;
-      window.open(`https://wa.me/60162209361?text=${msg}`, '_blank');
+      const msg = `Hello Tuck Kee! I'd like to place an order 🙏%0A%0A${orderLines}%0A%0AEstimated Total%3A RM ${total.toFixed(2)}%0A%0AName%3A ${encodeURIComponent(name)}%0APhone%3A ${encodeURIComponent(phone)}%0AAddress%3A ${encodeURIComponent(address)}%0A%0APlease confirm my order. Thank you!`;
+      window.open(`https://wa.me/60165279739?text=${msg}`, '_blank');
     });
   }
 
