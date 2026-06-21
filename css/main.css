@@ -1203,6 +1203,7 @@ a.contact-val:hover{color:var(--gold-light)}
 }
 .cart-input:focus{outline:none;border-color:var(--cinnabar)}
 .cart-input::placeholder{color:var(--ink-3)}
+.cart-input-address{resize:vertical;min-height:72px;line-height:1.5}
 .cart-form-error{font-size:0.76rem;color:var(--cinnabar);margin-bottom:10px;font-weight:500}
 .cart-note{
   font-size:0.74rem;color:var(--ink-3);
