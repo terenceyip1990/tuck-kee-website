@@ -1192,6 +1192,18 @@ a.contact-val:hover{color:var(--gold-light)}
 }
 .cart-total-row span:first-child{font-size:0.86rem;color:var(--ink-2);font-weight:500}
 .cart-total{font-family:var(--f-display);font-style:italic;font-size:1.5rem;font-weight:600;color:var(--cinnabar)}
+.cart-customer-form{margin-bottom:16px}
+.cart-form-label{font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-2);margin-bottom:10px}
+.cart-input{
+  display:block;width:100%;padding:10px 14px;
+  border:1px solid var(--line-strong);border-radius:8px;
+  font-size:0.86rem;font-family:var(--f-body);color:var(--ink);
+  background:var(--paper);margin-bottom:8px;
+  transition:border-color 0.15s;box-sizing:border-box;
+}
+.cart-input:focus{outline:none;border-color:var(--cinnabar)}
+.cart-input::placeholder{color:var(--ink-3)}
+.cart-form-error{font-size:0.76rem;color:var(--cinnabar);margin-bottom:10px;font-weight:500}
 .cart-note{
   font-size:0.74rem;color:var(--ink-3);
   margin-top:14px;line-height:1.6;text-align:center;

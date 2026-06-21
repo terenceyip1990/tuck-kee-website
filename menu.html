@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css?v=49">
+  <link rel="stylesheet" href="css/main.css?v=50">
 </head>
 <body>
 
@@ -443,7 +443,14 @@
         <span>Estimated Total</span>
         <span class="cart-total" id="cartTotal">RM 0.00</span>
       </div>
-      <button class="btn btn-cinnabar btn-pill btn-block" onclick="alert('Ordering system coming soon. Please call 016-220 9361 to place your order.')">Place Order by Phone</button>
+      <div class="cart-customer-form" id="cartCustomerForm">
+        <p class="cart-form-label">Your Details</p>
+        <input class="cart-input" id="custName" type="text" placeholder="Your name *" autocomplete="name">
+        <input class="cart-input" id="custPhone" type="tel" placeholder="Phone number *" autocomplete="tel">
+        <input class="cart-input" id="custEmail" type="email" placeholder="Email address (optional)" autocomplete="email">
+        <p class="cart-form-error" id="cartFormError" style="display:none"></p>
+      </div>
+      <button class="btn btn-cinnabar btn-pill btn-block" id="placeOrderBtn">Place Order by Phone</button>
       <p class="cart-note">Call <a href="tel:016-2209361">016-220 9361</a> to confirm or modify your order.</p>
     </div>
   </div>
