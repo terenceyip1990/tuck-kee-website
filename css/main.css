@@ -1965,6 +1965,9 @@ details[open] .faq-summary::after{transform:rotate(45deg)}
 .hero-portfolio-credit strong{color:var(--gold);font-weight:700;font-size:0.9rem}
 .footer-dev-credit{text-align:center;margin-top:14px;font-size:0.78rem;color:var(--ink-soft);letter-spacing:0.1em;text-transform:uppercase}
 .footer-dev-credit strong{color:var(--gold);font-weight:700}
+.footer-distributor-credit{text-align:center;margin-top:6px;font-size:0.78rem;color:var(--ink-soft);letter-spacing:0.08em;text-transform:uppercase}
+.footer-distributor-credit a{color:var(--gold);font-weight:600;text-decoration:none}
+.footer-distributor-credit a:hover{text-decoration:underline}
 .map-nav-btns{display:flex;gap:0;border-top:1px solid var(--line)}
 .map-nav-btn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:13px 10px;font-size:0.82rem;font-weight:600;letter-spacing:0.04em;text-decoration:none;transition:background 0.18s}
 .map-nav-gmaps{background:#fff;color:#333;border-right:1px solid var(--line)}
